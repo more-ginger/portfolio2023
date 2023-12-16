@@ -6,13 +6,13 @@ import rehypePrism from '@mapbox/rehype-prism';
 import remarkGfm from 'remark-gfm';
 
 // POSTS_PATH is useful when you want to get the path to a specific file
-export const POSTS_PATH = path.join(process.cwd(), 'posts');
+export const POSTS_PATH = path.join(process.cwd(), 'content/blogs');
 
 // postFilePaths is the list of all mdx files inside the POSTS_PATH directory
 export const postFilePaths = fs
   .readdirSync(POSTS_PATH)
   // Only include md(x) files
-  .filter((path) => /\.mdx?$/.test(path));
+  .filter((path) => /\.md?$/.test(path));
 
 export const sortPostsByDate = (posts) => {
   return posts.sort((a, b) => {
@@ -40,7 +40,7 @@ export const getPosts = () => {
 };
 
 export const getPostBySlug = async (slug) => {
-  const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
+  const postFilePath = path.join(POSTS_PATH, `${slug}.md`);
   const source = fs.readFileSync(postFilePath);
 
   const { content, data } = matter(source);
@@ -59,7 +59,7 @@ export const getPostBySlug = async (slug) => {
 
 export const getNextPostBySlug = (slug) => {
   const posts = getPosts();
-  const currentFileName = `${slug}.mdx`;
+  const currentFileName = `${slug}.md`;
   const currentPost = posts.find((post) => post.filePath === currentFileName);
   const currentPostIndex = posts.indexOf(currentPost);
 
@@ -67,7 +67,7 @@ export const getNextPostBySlug = (slug) => {
   // no prev post found
   if (!post) return null;
 
-  const nextPostSlug = post?.filePath.replace(/\.mdx?$/, '');
+  const nextPostSlug = post?.filePath.replace(/\.md?$/, '');
 
   return {
     title: post.data.title,
@@ -77,7 +77,7 @@ export const getNextPostBySlug = (slug) => {
 
 export const getPreviousPostBySlug = (slug) => {
   const posts = getPosts();
-  const currentFileName = `${slug}.mdx`;
+  const currentFileName = `${slug}.md`;
   const currentPost = posts.find((post) => post.filePath === currentFileName);
   const currentPostIndex = posts.indexOf(currentPost);
 
@@ -85,7 +85,7 @@ export const getPreviousPostBySlug = (slug) => {
   // no prev post found
   if (!post) return null;
 
-  const previousPostSlug = post?.filePath.replace(/\.mdx?$/, '');
+  const previousPostSlug = post?.filePath.replace(/\.md?$/, '');
 
   return {
     title: post.data.title,
