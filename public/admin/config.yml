@@ -16,3 +16,13 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Header image", name: "himage", widget: "image", required: false}
+  - name: "pages"
+    label: "Pages"
+    folder: ""
+    create: true
+    folder: "content/pages"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
