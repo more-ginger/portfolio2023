@@ -19,7 +19,6 @@ collections:
       - {label: "Header image", name: "himage", widget: "image", required: false}
   - name: "pages"
     label: "Pages"
-    folder: ""
     create: true
     folder: "content/pages"
     slug: "{{slug}}"
