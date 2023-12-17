@@ -77,13 +77,21 @@ const ThemeSwitcher = () => {
   );
 };
 
-export default function Footer({ copyrightText }) {
+export default function Footer({ }) {
   return (
-    <footer className="py-16 flex flex-col items-center">
-      <p className="dark:text-white uppercase mb-3 font-bold opacity-60">
-        {copyrightText}
-      </p>
-      <ThemeSwitcher />
+    <footer className="w-full sticky inset-x-0 bottom-0 bg-blue-500">
+      <div className="pt-5 pb-5 w-full flex bg-blue-100">
+        <div className="flex justify-evenly w-full bg-blue-200">
+          <div className="w-1/2">
+            <p className="pl-5 pr-5">
+              Logo
+            </p>
+          </div>
+          <div className="w-1/2">
+            <p className="pl-5 pr-5 text-right">About</p>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
