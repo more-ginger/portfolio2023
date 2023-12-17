@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import { getPosts } from '../utils/mdx-utils';
+import { getPosts, getPages } from '../utils/mdx-utils';
 
-import Layout, { GradientBackground } from '../components/Layout';
+import Layout from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
-export default function Index({ posts, globalData }) {
-  console.log(posts)
+export default function Browse({ posts, pages, globalData }) {
+  console.log('browse', pages)
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
@@ -45,7 +45,8 @@ export default function Index({ posts, globalData }) {
 
 export function getStaticProps() {
   const posts = getPosts();
+  const pages = getPages()
   const globalData = getGlobalData();
 
-  return { props: { posts, globalData } };
+  return { props: { posts, globalData, pages } };
 }

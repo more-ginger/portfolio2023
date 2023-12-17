@@ -1,8 +1,8 @@
 import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import { getPages } from '../utils/mdx-utils';
 
-export default function Index({ globalData }) {
-  console.log()
+export default function Index({ pages }) {
+  console.log('index', pages)
   return (
     <Layout>
       {/* <SEO title={globalData.name} description={globalData.blogTitle} /> */}
@@ -15,4 +15,10 @@ export default function Index({ globalData }) {
       </main>
     </Layout>
   );
+}
+
+export function getStaticProps() {
+  const pages = getPages();
+
+  return { props: { pages } };
 }

@@ -7,10 +7,16 @@ import remarkGfm from 'remark-gfm';
 
 // POSTS_PATH is useful when you want to get the path to a specific file
 export const POSTS_PATH = path.join(process.cwd(), 'content/blogs');
+export const PAGES_PATH = path.join(process.cwd(), 'content/pages');
 
 // postFilePaths is the list of all mdx files inside the POSTS_PATH directory
 export const postFilePaths = fs
   .readdirSync(POSTS_PATH)
+  // Only include md(x) files
+  .filter((path) => /\.md?$/.test(path));
+
+export const pageFilePaths = fs
+  .readdirSync(PAGES_PATH)
   // Only include md(x) files
   .filter((path) => /\.md?$/.test(path));
 
@@ -37,6 +43,21 @@ export const getPosts = () => {
   posts = sortPostsByDate(posts);
 
   return posts;
+};
+
+export const getPages = () => {
+  let pages = pageFilePaths.map((filePath) => {
+    const source = fs.readFileSync(path.join(PAGES_PATH, filePath));
+    const { content, data } = matter(source);
+
+    return {
+      content,
+      data,
+      filePath,
+    };
+  });
+
+  return pages;
 };
 
 export const getPostBySlug = async (slug) => {
