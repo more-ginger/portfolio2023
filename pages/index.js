@@ -21,7 +21,11 @@ export default function Index({ pages }) {
           </h1>
         </div>
         <div className="pl-5 pr-5 text-base">
-          {initialEssay[0].content}
+          {initialEssay[0].data.paragraphs.map((par, p) => (
+            <div key={par.paragraph}>
+              <p className="pb-10">{par.paragraph}</p>
+            </div>
+          ))}
         </div>
       </main>
     </Layout>

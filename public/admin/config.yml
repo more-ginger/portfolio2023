@@ -25,7 +25,6 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Id", name: "ID", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - &article-paragraphs
             label: paragraphs
             name: paragraphs
