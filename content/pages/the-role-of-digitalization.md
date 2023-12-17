@@ -1,7 +1,6 @@
 ---
 title: The role of digitalization
-ID:
-  - initial-essay
+ID: []
 ---
 With digitalization is intended the structuring of disparate domains of social life around digital communication (Brennen and Kreiss, 2016). Due to digital media being able to simulate other media, societal and cultural processes start converging. Specifically, a process of digitalization implies several degrees of convergence: among infrastructures, markets, devices, and so on (ibid., p. 7). In the case of journalism, this convergence is both functional and rhetorical, meaning that digital media are able to perform functions and cultural forms that are typical of the newspaper. News are written and published on online platforms, either on the digital edition of a newspaper or on third-parties platforms (Newman, 2023). Social media like Instagram and TikTok have continuously grown in the past years to be trusted as news outlets, especially among very young audiences (ibid.). This accelerating transition towards digital consumption has primarily affected the form of news. Online articles do not include exclusively static blocks of text and visuals anymore, but they contain (and are contained within) a plethora of multimedia artifacts – like video, podcasts, and interactive visuals (ibid.). This range of new forms, distributed across several platforms where metrics such as engagement are fundamental, has prompted publishers and journalists to rethink how news is produced and distributed to make their content more attractive and entertaining (Bielik and Višňovský, 2021). 
 
