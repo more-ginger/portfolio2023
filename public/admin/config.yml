@@ -17,7 +17,7 @@ collections:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: Authors, name: "authors", widget: "list"}
       - {label: Category, name: category, widget: string}
-      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Header image", name: "himage", widget: "image", required: false}
   - name: "pages"
