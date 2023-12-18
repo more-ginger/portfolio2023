@@ -1,3 +1,7 @@
+import Link from 'next/link';
+import Logo from '../components/Logo';
+import ArrowIcon from '../components/ArrowIcon';
+
 const sunIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -79,17 +83,27 @@ const ThemeSwitcher = () => {
 
 export default function Footer({ }) {
   return (
-    <footer className="w-full sticky inset-x-0 bottom-0 bg-blue-500">
-      <div className="pt-5 pb-5 w-full flex bg-blue-100">
-        <div className="flex justify-evenly w-full bg-blue-200">
-          <div className="w-1/2">
-            <p className="pl-5 pr-5">
-              Logo
+    <footer className="w-full bg-white sticky inset-x-0 bottom-0">
+      <div className="pt-5 pb-5 w-full flex">
+        <div className="flex justify-evenly w-full">
+          <div className="w-1/2 flex">
+            <p className="pl-5 pr-2">
+              FM
             </p>
+            <div className="w-5">
+              <Logo className="h-full w-fit" />
+            </div>
           </div>
-          <div className="w-1/2">
-            <p className="pl-5 pr-5 text-right">About</p>
-          </div>
+          <Link href="/about">
+            <div className="w-1/2 flex place-content-end">
+              <div className="">
+                <p className="pl-5 pr-2 text-right">About</p>
+              </div>
+              <div className="w-7 py-1.5">
+                <ArrowIcon className="h-full w-fit" />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </footer>

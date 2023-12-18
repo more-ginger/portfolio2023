@@ -9,8 +9,6 @@ export default function Index({ pages }) {
     return ids.includes('initial-essay')
   })
 
-  console.log(initialEssay)
-
   return (
     <Layout>
       {/* <SEO title={globalData.name} description={globalData.blogTitle} /> */}
