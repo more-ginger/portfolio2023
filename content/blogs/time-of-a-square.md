@@ -6,7 +6,7 @@ authors:
   - Lena Zagora
   - Jonas Arndt
 category: Urban data visualization
-date: 2023-12-18T17:58:46.038Z
+date: December 18, 2023 6:54 PM
 himage: /uploads/times2.png
 ---
 Here's the body text.
