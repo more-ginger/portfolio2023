@@ -3,6 +3,10 @@ title: "MVRDVHNI: The Living Archive of a Studio"
 slug: living-archive-mvrdv
 category: Archive
 date: December 17, 2023 6:54 PM
+description: "Project developed in cooperation with [Giacomo
+  Nanni](https://giacomonanni.info/) for “MVRDVHNI: The Living Archive of a
+  Studio” exhibition. The platform arranges, on a timeline, the topics discussed
+  by MVRDV in their documents and email exchanges, from 1990 to 2010."
 himage: /uploads/mvrdv-timeline-preview.png
 ---
 Project developed for “MVRDVHNI: The Living Archive of a Studio” exhibition. The platform arranges, on a timeline, the topics discussed by MVRDV in their documents and email exchanges, from 1990 to 2010.
