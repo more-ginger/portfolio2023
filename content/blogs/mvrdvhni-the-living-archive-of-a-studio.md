@@ -2,7 +2,7 @@
 title: "MVRDVHNI: The Living Archive of a Studio"
 slug: living-archive-mvrdv
 category: Archive
-date: 2023-12-21T10:42:45.900Z
+date: December 18, 2023 6:54 PM
 himage: /uploads/mvrdv-timeline-preview.png
 ---
 Project developed for “MVRDVHNI: The Living Archive of a Studio” exhibition. The platform arranges, on a timeline, the topics discussed by MVRDV in their documents and email exchanges, from 1990 to 2010.

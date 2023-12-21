@@ -1,7 +1,7 @@
-export default function ArrowIcon({ className }) {
+export default function Logo({ className }) {
   return (
     <svg className={className} width="32px" height="24px" viewBox="0 0 32 24">
-      <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="Symbols" stroke="none" fill="none">
         <g id="footer-desktop" transform="translate(-50.000000, -6.000000)">
           <g id="Group-3" transform="translate(50.000000, 6.000000)">
             <g id="Clip-2"></g>

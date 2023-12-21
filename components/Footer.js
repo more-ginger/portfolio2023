@@ -86,21 +86,21 @@ export default function Footer({ }) {
     <footer className="w-full bg-white sticky inset-x-0 bottom-0">
       <div className="pt-5 pb-5 w-full flex">
         <div className="flex justify-evenly w-full">
-          <div className="w-1/2 flex">
+          <div className="w-1/2 flex items-center">
             <p className="pl-5 pr-2">
               FM
             </p>
             <div className="w-5">
-              <Logo className="h-full w-fit" />
+              <Logo className="w-[20px] static" />
             </div>
           </div>
           <Link href="/about">
-            <div className="w-1/2 flex place-content-end">
+            <div className="w-1/2 flex items-center place-content-end">
               <div className="">
-                <p className="pl-5 pr-2 text-right">About</p>
+                <p className="pl-5 pr-3 text-right">About</p>
               </div>
-              <div className="w-7 py-1.5">
-                <ArrowIcon className="h-full w-fit" />
+              <div className="w-10">
+                <ArrowIcon className="w-[30px] static" />
               </div>
             </div>
           </Link>

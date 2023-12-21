@@ -4,7 +4,7 @@ slug: pop-science-charted-lexicon
 authors:
   - Rahul Raho
 category: Editorial
-date: 2023-12-21T10:26:17.636Z
+date: December 18, 2023 6:54 PM
 himage: /uploads/pscsp21_charted_bobross_final.jpg
 ---
 Charted Lexicon is Popular Science’s column on data art. For each topic, they pitch a dataset and ask for a designer and/or artist to develop a data driven illustration. For the Spring 2021 issue, I was commissioned with an illustration on Bob Rosses work. The dataset consisted in the main color and subjects of his painting, extracted through image recognition algorithms.

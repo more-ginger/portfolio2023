@@ -16,7 +16,7 @@ export default function Header({ name }) {
           </div>
         </div>
         <div className="flex w-1/2 justify-end">
-          <div className="pl-5 pr-5">
+          <div className="pl-5 pr-5 ">
             <a href="">
               <MailIcon />
             </a>

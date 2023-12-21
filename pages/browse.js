@@ -24,7 +24,7 @@ export default function Browse({ posts, globalData }) {
               >
                 <a className="w-full relative flex py-6 lg:py-10 px-3 block focus:outline-none focus:ring-4">
                   {post.data.himage && (
-                    <img className="md:w-1/2" src={`/uploads/dmacp-pip.png`}></img>
+                    <img className="md:w-1/2 md:max-w-xs border border-slate-950" src={`${post.data.himage}`}></img>
                   )}
                   <div className="pl-6 text-2xl md:w-3/5">
                     <h2 className="pb-6 leading-10">{post.data.title}</h2>
@@ -49,6 +49,8 @@ export default function Browse({ posts, globalData }) {
 export function getStaticProps() {
   const posts = getPosts();
   const globalData = getGlobalData();
+
+  console.log(posts)
 
   return { props: { posts, globalData } };
 }
