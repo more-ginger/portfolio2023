@@ -3,7 +3,7 @@ title: Data Mapping of the Anthropocene Curriculum
 slug: anthropocene-curriculum
 category: Archive
 date: December 18, 2023 9:54 AM
-description: n seven thematic dossiers, contributions from the fields of
+description: In seven thematic dossiers, contributions from the fields of
   geochemistry and paleobiology, history and science studies, artistic research,
   archaeology, literary studies, and anthropology reflect on selected material
   markers of human impacts on earthly strata. The opening essay of each dossier
