@@ -2,7 +2,7 @@
 title: Data Mapping of the Anthropocene Curriculum
 slug: anthropocene-curriculum
 category: Archive
-date: December 18, 2023 6:54 PM
+date: December 20, 2023 9:54 AM
 himage: /uploads/dmacp-pip.png
 ---
 The special publication Anthropogenic Markers: Stratigraphy and Context explores and contours some of the historical contexts, epistemic settings, and conceptual interventions around the ongoing work of Anthropocene geology. In seven thematic dossiers, contributions from the fields of geochemistry and paleobiology, history and science studies, artistic research, archaeology, literary studies, and anthropology reflect on selected material markers of human impacts on earthly strata. Taken together, they form a unique interdisciplinary conversation across positions and perspectives, helping to map out and expand upon the many ways of tracing the evidence that defines the onset of a human-dominated and crisis-laden epoch.
