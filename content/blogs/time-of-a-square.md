@@ -1,5 +1,5 @@
 ---
-title: Time of a Square
+title: Times of a Square
 slug: toasq
 authors:
   - Francesca Morini
