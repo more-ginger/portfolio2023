@@ -27,14 +27,13 @@ export default function Browse({ posts, globalData }) {
                     <img className="md:w-1/2 md:max-w-xs border border-slate-950" src={`${post.data.himage}`}></img>
                   )}
                   <div className="pl-6 text-2xl md:w-3/5">
-                    <h2 className="pb-6 leading-10">{post.data.title}</h2>
-                    <p>Authors and partners</p>
-                    {post.data.date && (
-                      <p className="mt-3 text-lg opacity-60">
-                        {post.data.date}
+                    {post.data.category && (
+                      <p className="mb-4 text-base">
+                        <span className="border rounded-full border-slate-950 px-3 py-1">{post.data.category}</span>
                       </p>
                     )}
-                    <ArrowIcon className="mt-10" />
+                    <h2 className="pb-6 leading-10">{post.data.title}</h2>
+                    <ArrowIcon className="w-[30px]" />
                   </div>
                 </a>
               </Link>
