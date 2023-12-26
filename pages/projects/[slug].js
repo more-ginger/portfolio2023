@@ -44,19 +44,23 @@ export default function PostPage({
             {frontMatter.title}
           </h1>
           {frontMatter.description && (
-            <p className="text-md italic mb-4">{frontMatter.description}</p>
+            <p className="text-xl italic mb-6">{frontMatter.description}</p>
           )}
           <div className="mt-10 md:mt-0 md:grid md:grid-cols-2">
             <div className="mr-4">
               <h6 className="uppercase text-sm border-b">Team and partners:</h6>
-              <p>Here the names of the team members </p>
+              {frontMatter.authors && (
+                <div className="p-0">{frontMatter.authors.map((author, a) => (
+                  <p className="text-sm inline flex-1 mr-1" key={a}>{author},</p>
+                ))}</div>
+              )}
             </div>
             <div>
               <h6 className="uppercase text-sm border-b">Year:</h6>
               <p>{yearOfProject}</p>
             </div>
           </div>
-          <img className="mt-4" src={frontMatter.himage} />
+          {/* <img className="mt-4" src={frontMatter.himage} /> */}
         </header>
         <main>
           <article className="mt-10 dark:prose-dark w-full text-base [&>p]:mt-4">
