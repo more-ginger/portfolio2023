@@ -22,17 +22,24 @@ export default function Browse({ posts, globalData }) {
                 as={`/projects/${post.filePath.replace(/\.md?$/, '')}`}
                 href={`/projects/[slug]`}
               >
-                <a className="w-full relative flex py-6 lg:py-10 px-3 block focus:outline-none focus:ring-4">
+                <a className="w-full relative flex-wrap md:flex-nowrap flex py-6 lg:py-10 px-3 block focus:outline-none focus:ring-4 hover:text-black no-underline">
                   {post.data.himage && (
-                    <img className="md:w-1/2 md:max-w-xs border border-slate-950" src={`${post.data.himage}`}></img>
+                    <img className="max-h-[320px] mx-auto md:mx-0 md:w-1/2 md:max-w-xs border border-slate-950" src={`${post.data.himage}`}></img>
                   )}
-                  <div className="pl-6 text-2xl md:w-3/5">
+                  <div className="px-6 pt-6 text-2xl md:w-3/5">
                     {post.data.category && (
-                      <p className="mb-4 text-base">
+                      <p className="mb-4 text-sm">
                         <span className="border rounded-full border-slate-950 px-3 py-1">{post.data.category}</span>
                       </p>
                     )}
-                    <h2 className="pb-6 leading-10">{post.data.title}</h2>
+                    <h2 className="pb-3 text-2xl">{post.data.title}</h2>
+                    {post.data.description && (
+                      <div className="mb-4 text-sm h-30">
+                        <p className="h-full text-pretty overflow-hidden">
+                          {post.data.description}
+                        </p>
+                      </div>
+                    )}
                     <ArrowIcon className="w-[30px]" />
                   </div>
                 </a>

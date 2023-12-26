@@ -3,8 +3,7 @@ title: Sonnige Grüße aus Klimaland
 slug: klimaland
 category: data journalism
 date: December 21, 2023 12:08 PM
-description: How can we measure Germany climate protection level? In this
-  cooperation with taz, we were interested in investigating to which extents
+description: We were interested in investigating to which extents
   Germany’s pledges to implement climate protection strategies are followed by
   concrete regional development.
 himage: /uploads/klimaland-preview.jpg

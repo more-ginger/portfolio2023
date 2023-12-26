@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Logo from '../components/Logo';
-import ArrowIcon from '../components/ArrowIcon';
 
 const sunIcon = (
   <svg
@@ -94,16 +93,12 @@ export default function Footer({ }) {
               <Logo className="w-[20px] static" />
             </div>
           </div>
-          <Link href="/about">
-            <div className="w-1/2 flex items-center place-content-end">
-              <div className="">
-                <p className="pl-5 pr-3 text-right">About</p>
-              </div>
-              <div className="w-10">
-                <ArrowIcon className="w-[30px] static" />
-              </div>
+
+          <div className="w-1/2 flex items-center place-content-end">
+            <div className="">
+              <Link className="pl-5 pr-3 text-right" href="/about">About</Link>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     </footer>

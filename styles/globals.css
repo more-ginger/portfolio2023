@@ -13,12 +13,24 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p,
+span,
+a {
   font-family: PPObject-Regular;
 }
 
 h2 {
   font-size: 36px;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: rgb(255, 0, 0);
 }
 
 body {
