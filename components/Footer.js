@@ -94,7 +94,7 @@ export default function Footer({ }) {
             </div>
           </div>
 
-          <div className="w-1/2 flex items-center place-content-end">
+          <div className="w-1/2 flex items-center place-content-end pr-5 md:pr-0">
             <div className="">
               <Link className="pl-5 pr-3 text-right" href="/about">About</Link>
             </div>

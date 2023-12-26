@@ -55,41 +55,42 @@ export default function About({ pages }) {
           <div>
             <div className="w-full block mt-3">
               <h3 className="pt-6 pb-2">Full CV:</h3>
-              <div className="relative overflow-scroll">
-                <h3 className="w-full text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('publications')}>Publications<span className="pl-1">+</span></h3>
-                <div className={`mt-0 ${showList && listName === 'publications' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
-                  <table className="text-sm my-4">
-                    <tbody>
-                      {
-                        publications.map((pub, p) => (
-                          <tr className="border-b border-b-red-600 border-dotted" key={p}>
-                            <td className="pr-6 align-top">{pub.year}</td>
-                            <td className="pr-6 align-top">{pub.title}</td>
-                            <td className="align-top">{pub.publication}</td>
+              <div>
+                <div>
+                  <h3 className="w-full text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('publications')}>Publications<span className="pl-1">{showList ? "-" : "+"}</span></h3>
+                  <div className={`mt-0 ${showList && listName === 'publications' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
+                    <table className="text-sm my-4">
+                      <tbody>
+                        {
+                          publications.map((pub, p) => (
+                            <tr className="border-b border-b-red-600 border-dotted" key={p}>
+                              <td className="pr-6 align-top">{pub.year}</td>
+                              <td className="pr-6 align-top">{pub.title}</td>
+                              <td className="align-top">{pub.publication}</td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('teaching')}>Teaching and talks<span className="pl-1">{showList ? "-" : "+"}</span></h3>
+                  <div className={`mt-0 ${showList && listName === 'teaching' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
+                    <table className="text-sm w-full my-4">
+                      <tbody>
+                        {talks.map((talk, t) => (
+                          <tr className="border-b border-b-red-600 border-dotted" key={t}>
+                            <td className="pr-6 align-top">{talk.year}</td>
+                            <td className="pr-6 align-top">{talk.icon}</td>
+                            <td className="pr-6 align-top">{talk.title}</td>
+                            <td className="align-top">{talk.place}</td>
                           </tr>
                         ))}
-                    </tbody>
-                  </table>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('teaching')}>Teaching and talks<span className="pl-1">+</span></h3>
-                <div className={`mt-0 ${showList && listName === 'teaching' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
-                  <table className="text-sm w-full my-4">
-                    <tbody>
-                      {talks.map((talk, t) => (
-                        <tr className="border-b border-b-red-600 border-dotted" key={t}>
-                          <td className="pr-6 align-top">{talk.year}</td>
-                          <td className="pr-6 align-top">{talk.icon}</td>
-                          <td className="pr-6 align-top">{talk.title}</td>
-                          <td className="align-top">{talk.place}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              {/* <div>
+                {/* <div>
                 <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('conf')}>Conferences and exhibitions<span className="pl-1">+</span></h3>
                 <div className={`mt-0 ${showList && listName === 'conf' ? "visible" : "hidden opacity-0 h-0"}`}>
                   <table className="text-sm w-full my-4">
@@ -108,15 +109,16 @@ export default function About({ pages }) {
                   </table>
                 </div>
               </div> */}
-              <div>
-                <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('clients')}>Selected clients<span className="pl-1">+</span></h3>
-                <div className={`transition-all ${showList && listName === 'clients' ? "h-fit opacity-1" : "h-0 opacity-0"}`}>
-                  <div className="text-sm w-full my-4">
-                    <p>
-                      {clients.map((client, c) => (
-                        <span className="pr-1" key={c}>{client} &#x26AC;</span>
-                      ))}
-                    </p>
+                <div>
+                  <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('clients')}>Selected clients<span className="pl-1">{showList ? "-" : "+"}</span></h3>
+                  <div className={`transition-all ${showList && listName === 'clients' ? "h-fit opacity-1" : "h-0 opacity-0"}`}>
+                    <div className="text-sm w-full my-4">
+                      <p>
+                        {clients.map((client, c) => (
+                          <span className="pr-1" key={c}>{client} &#x26AC;</span>
+                        ))}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
