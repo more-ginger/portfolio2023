@@ -13,7 +13,7 @@ categories:
   - Data journalism
   - Web development
   - Print
-  - Climate
+  - Climate visualization
 date: December 21, 2023 12:08 PM
 description: In the Klimakarten project we investigate the development of
   climate protection strategies at a regional level, in Germany.
