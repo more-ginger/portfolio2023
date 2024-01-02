@@ -23,3 +23,11 @@ The final outcome is a long read, published both in the printed and digital vers
 ![](/uploads/tazwater-interactivevis.png)
 
 ![](/uploads/tazwater-interaction.png)
+
+### Experimenting with small news widgets
+
+![](/uploads/water-sequence-taz.jpg)
+
+### Early design and drafts for mobile version
+
+![](/uploads/tazwater-design.png)
