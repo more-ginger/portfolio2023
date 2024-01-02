@@ -24,6 +24,10 @@ The final outcome is a long read, published both in the printed and digital vers
 
 ![](/uploads/tazwater-interaction.png)
 
+Aside from interactive visualizations, the article contains a series of maps detailing the funding and water stress situation for specific countries which were at the center of our investigation. The image below shows the example of Syria, which has been chosen due to its special relationship with Germany. The visualization shows not only the geographic position, water stress, and funding situation, but also reports an additional layer of data, showing the funding development over time.
+
+![](/uploads/syrien.png)
+
 ### Experimenting with small news widgets
 
 Long reads are a popular format for data journalism pieces. Data visualizations cannot be interpreted without context and this often translates in detailed articles punctuated by interactive or static charts. This is not always ideal, especially if we need a visualization to become part of multiple articles or to be embedded in different parts of the newspaper website. For this project, I was tasked not only with the creation of static and interactive visualizations for the long read, but also with the creation of small, stand-alone charts that could be shown to the reader on the project’s landing page. 
@@ -34,7 +38,7 @@ For this reason, I designed and developed a self-contained visualization carouse
 
 The concept is explained by showing different countries and explaining what are the implications of water stress, depending on the local climate, culture, and economy. A cartogram has been used to give equal visual weight to all countries, given the small size of the visualization. When in action, the smooth interaction allows the readers to go back and forth between the different slides and interact with the individual countries to obtain more information, as visible in the video below. 
 
-![](/uploads/tazwater-video-2-.gif)
+![](/uploads/tazwater-video-3-.gif)
 
 ### Early design and drafts for mobile version
 
