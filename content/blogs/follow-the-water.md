@@ -10,9 +10,9 @@ categories:
   - Web development
   - Investigative data journalism
 date: December 16, 2023 6:54 PM
-description: "*Follow the water, follow the money*: visualization-driven
-  longread and scrollable visualization snippets for taz about how much money is
-  spent by the German goverment on water development projects."
+description: "Follow the water, follow the money: visualization-driven articles
+  and scrollable visualization snippets for taz about how much money is spent by
+  the German goverment on water development projects."
 himage: /uploads/tazwater-map-preview.png
 category: Data journalism
 ---
