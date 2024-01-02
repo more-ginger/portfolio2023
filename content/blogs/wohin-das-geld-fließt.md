@@ -5,6 +5,10 @@ authors:
   - Eva Oer
   - Luise Strothmann
 link: https://taz.de/Entwicklungshilfe-fuer-Wasserprojekte/!5808097/
+categories:
+  - Data journalism
+  - Web development
+  - Investigative data journalism
 date: December 16, 2023 6:54 PM
 description: The project – a cooperation with taz – details where and how money
   are spent by the German goverment on water development projects. The final
