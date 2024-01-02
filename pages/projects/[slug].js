@@ -46,16 +46,25 @@ export default function PostPage({
           {frontMatter.description && (
             <p className="text-xl italic mb-6">{frontMatter.description}</p>
           )}
-          <div className="mt-10 md:mt-0 md:grid md:grid-cols-2">
-            <div className="mr-4">
+          <div className="mb-10 mt-10">
+            <h6 className="uppercase text-sm border-b md:mr-10">Link:</h6>
+            <Link href="/">
+              <div className="flex cursor-pointer">
+                <a className="inline-block align-middle">link</a>
+                <ArrowIcon className="w-[18px] ml-2 -rotate-45" />
+              </div>
+            </Link>
+          </div>
+          <div className="mb-10 mt-10 md:grid md:grid-cols-2">
+            <div className="md:mr-10 md:mb-0 mb-10">
               <h6 className="uppercase text-sm border-b">Team and partners:</h6>
               {frontMatter.authors && (
                 <div className="p-0">{frontMatter.authors.map((author, a) => (
-                  <p className="text-sm inline flex-1 mr-1" key={a}>{author},</p>
+                  <p className="text-sm inline flex-1 mr-1" key={a}>{author}{a !== frontMatter.authors.length - 1 ? ',' : ''}</p>
                 ))}</div>
               )}
             </div>
-            <div>
+            <div className="md:mr-10">
               <h6 className="uppercase text-sm border-b">Year:</h6>
               <p>{yearOfProject}</p>
             </div>
@@ -63,7 +72,7 @@ export default function PostPage({
           {/* <img className="mt-4" src={frontMatter.himage} /> */}
         </header>
         <main>
-          <article className="mt-10 dark:prose-dark w-full text-base [&>p]:mt-4">
+          <article className="mt-10 mb-10 pb-10 border-b dark:prose-dark w-full text-base [&>p]:mt-10 [&>p>img]:border">
             <MDXRemote {...source} components={components} />
           </article>
         </main>

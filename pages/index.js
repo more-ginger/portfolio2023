@@ -14,7 +14,7 @@ export default function Index({ pages }) {
       {/* <SEO title={globalData.name} description={globalData.blogTitle} /> */}
       <main className="w-full flex-grow pb-48">
         <div className="pl-5 pr-5 pt-5 pb-5">
-          <h1>
+          <h1 className="text-3xl border-b">
             {initialEssay[0].data.title}
           </h1>
         </div>

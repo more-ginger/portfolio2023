@@ -39,8 +39,8 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className="relative overflow-scroll">
-      <div className="flex flex-col justify-between items-center max-w-3xl w-full mx-auto h-screen relative">
+    <div className="relative">
+      <div className="flex flex-col justify-between items-center max-w-3xl w-full mx-auto h-max relative">
         <Header />
         {children}
         <Footer />

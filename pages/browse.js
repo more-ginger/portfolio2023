@@ -11,7 +11,7 @@ export default function Browse({ posts, globalData }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <main className="w-full">
+      <main className="w-full relative">
         <ul className="w-full">
           {posts.map((post) => (
             <li
@@ -27,11 +27,13 @@ export default function Browse({ posts, globalData }) {
                     <img className="max-h-[320px] mx-auto md:mx-0 md:w-1/2 md:max-w-xs border border-slate-950" src={`${post.data.himage}`}></img>
                   )}
                   <div className="px-6 pt-6 text-2xl md:w-3/5">
-                    {post.data.category && (
-                      <p className="mb-4 text-sm">
-                        <span className="border rounded-full border-slate-950 px-3 py-1">{post.data.category}</span>
-                      </p>
-                    )}
+                    <div className="flex flex-wrap">
+                      {post.data.categories && post.data.categories.map((category, c) => (
+                        <p className="mb-4 text-sm mr-1" key={c}>
+                          <span className="border rounded-full border-slate-950 px-3 py-1">{category}</span>
+                        </p>
+                      ))}
+                    </div>
                     <h2 className="pb-3 text-2xl">{post.data.title}</h2>
                     {post.data.description && (
                       <div className="mb-4 text-sm h-30">
