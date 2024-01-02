@@ -72,7 +72,7 @@ export default function PostPage({
           {/* <img className="mt-4" src={frontMatter.himage} /> */}
         </header>
         <main>
-          <article className="mt-10 mb-10 pb-10 border-b dark:prose-dark w-full text-base [&>p]:mt-10 [&>p>img]:border">
+          <article className="mt-10 mb-10 pb-10 border-b dark:prose-dark w-full text-base [&>p]:mt-10 [&>p>img]:border [&>h3]:text-2xl [&>h3]:mt-10 [&>h3]:border-t [&>h3]:pt-6">
             <MDXRemote {...source} components={components} />
           </article>
         </main>

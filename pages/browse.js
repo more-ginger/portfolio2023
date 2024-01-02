@@ -37,7 +37,7 @@ export default function Browse({ posts, globalData }) {
                     <h2 className="pb-3 text-2xl">{post.data.title}</h2>
                     {post.data.description && (
                       <div className="mb-4 text-sm h-30">
-                        <p className="h-full text-pretty overflow-hidden">
+                        <p className="h-full overflow-hidden">
                           {post.data.description}
                         </p>
                       </div>

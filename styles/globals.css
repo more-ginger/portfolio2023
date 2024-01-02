@@ -18,6 +18,7 @@ p,
 span,
 a {
   font-family: PPObject-Regular;
+  text-wrap: pretty;
 }
 
 h2 {

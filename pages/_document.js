@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <body
           className={`antialiased text-lg bg-white dark:bg-gray-900 dark:text-white leading-base`}
         >
-          <Main />
+          <Main className="main-netlify-cms" />
           <NextScript />
           <script dangerouslySetInnerHTML={{
             __html: `

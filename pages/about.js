@@ -35,7 +35,7 @@ export default function About({ pages }) {
   return (
     <Layout>
       {/* <SEO title={globalData.name} description={globalData.blogTitle} /> */}
-      <main className="w-full flex-grow">
+      <main className="w-full flex-grow text-pretty">
         <div className="pl-5 pr-5 pt-5 pb-5 md:mt-6">
           <div className="w-full flex flex-wrap">
             <div className="md:w-1/2">
