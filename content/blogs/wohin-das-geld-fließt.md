@@ -30,7 +30,7 @@ Long reads are a popular format for data journalism pieces. Data visualizations 
 
 For this reason, I designed and developed a self-contained visualization carousel: by swiping or scrolling right, the reader is able to follow the unfolding of a short story about water stress. The figure below shows an early draft of the individual steps part of the scrollying carousel.
 
-![](/uploads/water-sequence-taz.jpg)
+![](/uploads/water-sequence-taz_vertical.jpg)
 
 The concept is explained by showing different countries and explaining what are the implications of water stress, depending on the local climate, culture, and economy. A cartogram has been used to give equal visual weight to all countries, given the small size of the visualization. When in action, the smooth interaction allows the readers to go back and forth between the different slides and interact with the individual countries to obtain more information, as visible in the video below. 
 
