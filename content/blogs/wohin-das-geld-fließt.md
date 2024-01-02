@@ -10,15 +10,13 @@ categories:
   - Web development
   - Investigative data journalism
 date: December 16, 2023 6:54 PM
-description: The project – a cooperation with taz – details where and how money
-  are spent by the German goverment on water development projects. The final
-  outcomes are a printed and digital long read.
+description: Visualization-driven printed and digital longread and scrollable
+  snippets for taz, detailing where and how money are spent by the German
+  goverment on water development projects.
 himage: /uploads/tazwater-map-preview.png
 category: Data journalism
 ---
-Germany is one of the biggest money donors worldwide when it comes to Water Development projects. Journalists at taz have reported in detail on where these billions of Euro are channeled. The investigation took almost one year. In this period of time I supported the journalistic team at taz in making sense of the OECD data and produce insights on where, when, and how German money were channeled and consequently spent. 
-
-The final outcome is a long read, published both in the printed and digital versions of taz’s newspaper. The articles are complemented by various visualizations slicing the data at the benefit of the reader. The image below shows the main interactive visualization included in the article. The cartogram shows the reported water stress of individual countries (mapped to the color) and the amount of funds, expressed in Million $, received to stop or hinder it.
+Germany is one of the biggest money donors worldwide when it comes to Water Development projects. Journalists at taz have reported in detail on where these billions of Euro are channeled. The investigation took almost one year. In this period of time I supported the journalistic team at taz in making sense of the OECD data and produce insights on where, when, and how German money were channeled and consequently spent. The final outcome is a long read, published both in the printed and digital versions of taz’s newspaper. The articles are complemented by various visualizations slicing the data at the benefit of the reader. The image below shows the main interactive visualization included in the article. The cartogram shows the reported water stress of individual countries (mapped to the color) and the amount of funds, expressed in Million $, received to stop or hinder it.
 
 ![](/uploads/tazwater-interactivevis.png)
 
