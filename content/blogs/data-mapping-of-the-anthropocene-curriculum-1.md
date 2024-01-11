@@ -6,12 +6,17 @@ authors:
   - Alan Woo
   - Christoph Rosol
   - Dirk Wintergrün
-category: Archive
+link: ""
+categories:
+  - Digital humanities
+  - Web development
+  - Text visualization
 date: December 18, 2023 9:54 AM
 description: This generative visualization complements seven thematic dossiers
   part of the Anthropocene Curriculum. These visualizations are meant as a
   navigational interface to support readers’ exploration of the essay.
 himage: /uploads/dmacp-pip.png
+category: Archive
 ---
 The special publication Anthropogenic Markers: Stratigraphy and Context explores and contours some of the historical contexts, epistemic settings, and conceptual interventions around the ongoing work of Anthropocene geology. In seven thematic dossiers, contributions from the fields of geochemistry and paleobiology, history and science studies, artistic research, archaeology, literary studies, and anthropology reflect on selected material markers of human impacts on earthly strata. Taken together, they form a unique interdisciplinary conversation across positions and perspectives, helping to map out and expand upon the many ways of tracing the evidence that defines the onset of a human-dominated and crisis-laden epoch.
 
