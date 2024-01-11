@@ -22,6 +22,8 @@ category: Archive
 ---
 The special publication Anthropogenic Markers: Stratigraphy and Context explores and contours some of the historical contexts, epistemic settings, and conceptual interventions around the ongoing work of Anthropocene geology. In seven thematic dossiers, contributions from the fields of geochemistry and paleobiology, history and science studies, artistic research, archaeology, literary studies, and anthropology reflect on selected material markers of human impacts on earthly strata. Taken together, they form a unique interdisciplinary conversation across positions and perspectives, helping to map out and expand upon the many ways of tracing the evidence that defines the onset of a human-dominated and crisis-laden epoch.
 
+![](/uploads/video_amd.gif)
+
 ![](/uploads/dmacp-visualization-expanded.png)
 
 ![](/uploads/dmacp-visualization-expanded-selected.png)
