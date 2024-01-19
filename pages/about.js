@@ -57,7 +57,7 @@ export default function About({ pages }) {
               <h3 className="pt-6 pb-2">Full CV:</h3>
               <div>
                 <div>
-                  <h3 className="w-full text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('publications')}>Publications<span className="pl-1">{showList ? "-" : "+"}</span></h3>
+                  <h3 className="w-full text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('publications')}>Publications<span className="pl-1">{showList && listName === 'publications' ? "-" : "+"}</span></h3>
                   <div className={`mt-0 ${showList && listName === 'publications' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
                     <table className="text-sm my-4">
                       <tbody>
@@ -74,7 +74,7 @@ export default function About({ pages }) {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('teaching')}>Teaching and talks<span className="pl-1">{showList ? "-" : "+"}</span></h3>
+                  <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('teaching')}>Teaching and talks<span className="pl-1">{showList && listName == 'teaching' ? "-" : "+"}</span></h3>
                   <div className={`mt-0 ${showList && listName === 'teaching' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
                     <table className="text-sm w-full my-4">
                       <tbody>
@@ -110,7 +110,7 @@ export default function About({ pages }) {
                 </div>
               </div> */}
                 <div>
-                  <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('clients')}>Selected clients<span className="pl-1">{showList ? "-" : "+"}</span></h3>
+                  <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('clients')}>Selected clients<span className="pl-1">{showList && listName === 'clients' ? "-" : "+"}</span></h3>
                   <div className={`transition-all ${showList && listName === 'clients' ? "h-fit opacity-1" : "h-0 opacity-0"}`}>
                     <div className="text-sm w-full my-4">
                       <p>

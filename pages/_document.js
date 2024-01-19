@@ -10,7 +10,7 @@ class MyDocument extends Document {
           <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <body
-          className={`antialiased text-lg bg-white dark:bg-gray-900 dark:text-white leading-base`}
+          className={`antialiased text-lg bg-white dark:bg-gray-900 dark:text-white leading-base [&>img]:w-1/2`}
         >
           <Main className="main-netlify-cms" />
           <NextScript />
