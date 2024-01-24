@@ -7,7 +7,6 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
 export default function Browse({ posts, globalData }) {
-  console.log('browse', posts)
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
@@ -57,8 +56,6 @@ export default function Browse({ posts, globalData }) {
 export function getStaticProps() {
   const posts = getPosts();
   const globalData = getGlobalData();
-
-  console.log(posts)
 
   return { props: { posts, globalData } };
 }

@@ -11,7 +11,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import ArrowIcon from '../../components/ArrowIcon';
 import CustomLink from '../../components/CustomLink';
-import Layout, { GradientBackground } from '../../components/Layout';
+import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 
 // Custom components/renderers to pass to MDX.
@@ -46,26 +46,26 @@ export default function PostPage({
           {frontMatter.description && (
             <p className="text-xl italic mb-6">{frontMatter.description}</p>
           )}
-          <div className="mb-10 mt-10">
-            <h6 className="uppercase text-sm border-b md:mr-10">Link:</h6>
+          {frontMatter.link && (<div className="mb-10 mt-10">
+            <h6 className="uppercase text-sm border-b md:mr-10 text-sm">Link:</h6>
             <Link href="/">
-              <div className="flex cursor-pointer">
-                <a className="inline-block align-middle">link</a>
-                <ArrowIcon className="w-[18px] ml-2 -rotate-45" />
+              <div className="inline-flex relative cursor-pointer text-sm leading-none">
+                <a className="inline-block align-middle uppercase">Visit project</a>
+                {/* <ArrowIcon className="h-[18px] inline-block align-middle" /> */}
               </div>
             </Link>
-          </div>
+          </div>)}
           <div className="mb-10 mt-10 md:grid md:grid-cols-2">
-            <div className="md:mr-10 md:mb-0 mb-10">
-              <h6 className="uppercase text-sm border-b">Team and partners:</h6>
+            <div className="md:mr-10 md:mb-0 mb-10 text-sm">
+              <h6 className="uppercase border-b">Team and partners:</h6>
               {frontMatter.authors && (
                 <div className="p-0">{frontMatter.authors.map((author, a) => (
-                  <p className="text-sm inline flex-1 mr-1" key={a}>{author}{a !== frontMatter.authors.length - 1 ? ',' : ''}</p>
+                  <p className="inline flex-1 mr-1" key={a}>{author}{a !== frontMatter.authors.length - 1 ? ',' : ''}</p>
                 ))}</div>
               )}
             </div>
-            <div className="md:mr-10">
-              <h6 className="uppercase text-sm border-b">Year:</h6>
+            <div className="md:mr-10 text-sm">
+              <h6 className="uppercase border-b">Year:</h6>
               <p>{yearOfProject}</p>
             </div>
           </div>

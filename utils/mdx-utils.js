@@ -78,6 +78,25 @@ export const getPostBySlug = async (slug) => {
   return { mdxSource, data, postFilePath };
 };
 
+export const getPageBySlug = async (slug) => {
+  const pageFilePath = path.join(PAGES_PATH, `${slug}.md`);
+  const source = fs.readFileSync(pageFilePath);
+
+  const { content, data } = matter(source);
+
+  const mdxSource = await serialize(content, {
+    // Optionally pass remark/rehype plugins
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypePrism],
+    },
+    scope: data,
+  });
+
+  return { mdxSource, data, pageFilePath };
+};
+
+
 export const getNextPostBySlug = (slug) => {
   const posts = getPosts();
   const currentFileName = `${slug}.md`;

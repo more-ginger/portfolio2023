@@ -30,6 +30,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Id", name: "ID", widget: "list"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
       - &article-paragraphs
             label: paragraphs
             name: paragraphs
