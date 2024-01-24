@@ -13,7 +13,7 @@ categories:
   - Digital humanities
   - Web development
   - Text visualization
-date: December 18, 2023 9:54 AM
+date: January 31, 2022 9:54 AM
 description: This generative visualization complements seven thematic dossiers
   part of the Anthropocene Curriculum. These visualizations are meant as a
   navigational interface to support readers’ exploration of the essay.
