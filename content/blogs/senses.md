@@ -6,10 +6,11 @@ authors:
   - Jonas Parnow
   - Fidel Thomet
   - Nadia Zeissig
+link: https://climatescenarios.org/toolkit/
 categories:
   - Climate visualization
   - Web development
-date: December 15, 2023 6:54 PM
+date: May 20, 2020 6:54 PM
 description: SENSES is a project about climate change scenarios. Each
   visualization explains different climate futures to policy-makers, finance
   experts, and citizens.
