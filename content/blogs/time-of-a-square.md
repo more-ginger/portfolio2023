@@ -5,11 +5,12 @@ authors:
   - Francesca Morini
   - Lena Zagora
   - Jonas Arndt
+link: https://uclab.fh-potsdam.de/rosenthaler/
 categories:
   - Web development
   - Print
   - Urban visualization
-date: December 10, 2023 6:54 PM
+date: October 1, 2019 6:54 PM
 description: Time of a Square is an interactive long read scrollable article and
   printed booklet that let the reader explore temporality in Rosenthaler Platz,
   Berlin.
