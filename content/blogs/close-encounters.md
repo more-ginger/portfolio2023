@@ -2,7 +2,9 @@
 title: Close Encounters
 slug: close-encounters
 category: Web
-date: 2023-12-21T10:31:29.482Z
+date: January 30, 2020 11:31 AM
+description: A personal project about UFOs. The different views show how
+  extraterrestrial sightnings have increased in the last decade worlwide.
 himage: /uploads/ufo_timeline_detail.png
 ---
 While all eyes were on the still-raging pandemic, the Pentagon quietly released their records of reported UFO sightings around the world (yes, really). The newly declassified information came on the heels of years of witness testimonies collected by the  for several decades. So, in need of a little comic relief from the monotony of lockdown life, we decided to comb through the new material and see what the data might reveal! Some entries were incredibly detailed, including close descriptions of each UFO’s design, brightness, and speed. Some seemed more offhand, or vague. All of them were weird. 
