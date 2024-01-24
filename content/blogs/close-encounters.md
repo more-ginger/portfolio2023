@@ -8,7 +8,7 @@ categories:
   - Text visualization
   - Web development
   - Graphic design
-date: December 13, 2023 6:54 PM
+date: February 2, 2020 6:54 PM
 description: A personal project about UFOs. The different views show how
   extraterrestrial sightnings have increased in the last decade worlwide.
 himage: /uploads/ufo_timeline_detail.png
