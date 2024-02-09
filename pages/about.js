@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import Link from 'next/link';
 import { getPages } from '../utils/mdx-utils';
 import { useState, useRef, useEffect } from 'react';
 import curriculumVitae from '../public/data/personal.json'
@@ -27,7 +28,7 @@ export default function About({ pages }) {
     setListName(list)
   }
 
-  const publications = curriculumVitae[0].publications
+  const publications = curriculumVitae[0].publications.reverse()
   const talks = curriculumVitae[0].talks
   // const conferences = curriculumVitae[0].exhibitions
   const clients = curriculumVitae[0].clients
@@ -59,14 +60,14 @@ export default function About({ pages }) {
                 <div>
                   <h3 className="w-full text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('publications')}>Publications<span className="pl-1">{showList && listName === 'publications' ? "-" : "+"}</span></h3>
                   <div className={`mt-0 ${showList && listName === 'publications' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
-                    <table className="text-sm my-4">
+                    <table className="text-sm my-4 border-separate border-spacing-3">
                       <tbody>
                         {
                           publications.map((pub, p) => (
-                            <tr className="border-b border-b-red-600 border-dotted" key={p}>
-                              <td className="pr-6 align-top">{pub.year}</td>
-                              <td className="pr-6 align-top">{pub.title}</td>
-                              <td className="align-top">{pub.publication}</td>
+                            <tr className="" key={p}>
+                              <td className="border-t border-t-red-600 border-dotted pr-6 align-top text-xs">{pub.year}</td>
+                              <td className="border-t border-t-red-600 border-dotted align-top"><Link href={pub.link}>{pub.title}</Link></td>
+                              <td className="border-t border-t-red-600 border-dotted align-top text-xs">{pub.publication}</td>
                             </tr>
                           ))}
                       </tbody>
@@ -76,14 +77,14 @@ export default function About({ pages }) {
                 <div>
                   <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('teaching')}>Teaching and talks<span className="pl-1">{showList && listName == 'teaching' ? "-" : "+"}</span></h3>
                   <div className={`mt-0 ${showList && listName === 'teaching' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
-                    <table className="text-sm w-full my-4">
+                    <table className="text-sm my-4 border-separate border-spacing-3">
                       <tbody>
                         {talks.map((talk, t) => (
                           <tr className="border-b border-b-red-600 border-dotted" key={t}>
-                            <td className="pr-6 align-top">{talk.year}</td>
-                            <td className="pr-6 align-top">{talk.icon}</td>
-                            <td className="pr-6 align-top">{talk.title}</td>
-                            <td className="align-top">{talk.place}</td>
+                            <td className="border-t border-t-red-600 border-dotted pr-6 align-top text-xs">{talk.year}</td>
+                            <td className="border-t border-t-red-600 border-dotted align-top">{talk.icon}</td>
+                            <td className="border-t border-t-red-600 border-dotted align-top">{talk.title}</td>
+                            <td className="border-t border-t-red-600 border-dotted align-top text-xs">{talk.place}</td>
                           </tr>
                         ))}
                       </tbody>

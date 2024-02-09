@@ -7,7 +7,6 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
 export default function Archive({ pages, globalData }) {
-  console.log(pages)
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />

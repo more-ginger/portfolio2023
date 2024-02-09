@@ -11,14 +11,14 @@ export default function Header({ name }) {
       <div className="pt-5 pb-5 w-full flex">
         <div className="flex w-2/3">
           <div className="flex-none pl-5 pr-2">
-            <Link href="/">Read</Link>
-          </div>
-          <div className="flex-none pl-2 pr-2">
-            <Link href="/browse">
+            <Link href="/">
               Browse
             </Link>
           </div>
-          <div className="flex-none pr-2 pl-2 italic text-slate-600">
+          <div className="flex-none pl-2 pr-2 pl-2 italic text-slate-600 pointer-events-none cursor-not-allowed non-active-link">
+            <Link href="/read">Read</Link>
+          </div>
+          <div className="flex-none pr-2 pl-2 italic text-slate-600 pointer-events-none cursor-not-allowed non-active-link">
             <Link href="/archive">
               Archive
             </Link>

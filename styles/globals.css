@@ -29,6 +29,10 @@ a {
   text-decoration: underline;
 }
 
+.non-active-link>a {
+  text-decoration: none;
+}
+
 a:hover,
 a:active {
   color: rgb(255, 0, 0);
