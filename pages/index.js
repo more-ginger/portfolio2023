@@ -28,7 +28,7 @@ export default function Browse({ posts, globalData }) {
                   <div className="px-6 pt-6 text-2xl md:w-3/5">
                     <div className="flex flex-wrap">
                       {post.data.categories && post.data.categories.map((category, c) => (
-                        <p className="mb-4 text-sm mr-1" key={c}>
+                        <p className="mb-4 text-xs mr-1" key={c}>
                           <span className="border rounded-full border-slate-950 px-3 py-1">{category}</span>
                         </p>
                       ))}

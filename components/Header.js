@@ -10,18 +10,18 @@ export default function Header({ name }) {
     <header className="w-full z-10 sticky inset-x-0 top-0 bg-white backdrop-blur-lg bg-opacity-80">
       <div className="pt-5 pb-5 w-full flex">
         <div className="flex w-2/3">
-          <div className="flex-none pl-5 pr-2">
+          <div className="flex-none pl-5 pr-1">
             <Link href="/">
               Browse
             </Link>
           </div>
-          <div className="flex-none pl-2 pr-2 pl-2 italic text-slate-600 pointer-events-none cursor-not-allowed non-active-link">
-            <Link href="/read">Read</Link>
+          <div className="flex-none pl-1 pr-1 pl-2 italic pointer-events-none cursor-not-allowed non-active-link">
+            <Link href="/read"><span className="opacity-20 text-sm">Read</span></Link><span className="ml-1 px-2 text-white align-top text-[9px] bg-red-700 rounded-full">soon</span>
           </div>
-          <div className="flex-none pr-2 pl-2 italic text-slate-600 pointer-events-none cursor-not-allowed non-active-link">
+          <div className="flex-none pr-2 pl-1 italic pointer-events-none cursor-not-allowed non-active-link">
             <Link href="/archive">
-              Archive
-            </Link>
+              <span className="opacity-20 text-sm">Archive</span>
+            </Link><span className="ml-1 px-2 text-white align-top text-[9px] bg-red-700 rounded-full">soon</span>
           </div>
         </div>
         <div className="flex w-1/3 justify-end">
