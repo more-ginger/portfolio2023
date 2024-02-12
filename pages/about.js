@@ -5,6 +5,11 @@ import { useState, useRef, useEffect } from 'react';
 import curriculumVitae from '../public/data/personal.json'
 const INITIAL_LIST_NAME = ''
 
+const publications = curriculumVitae[0].publications.reverse()
+const talks = curriculumVitae[0].talks.reverse()
+// const conferences = curriculumVitae[0].exhibitions
+const clients = curriculumVitae[0].clients.reverse()
+
 export default function About({ pages }) {
   const [showList, setShowList] = useState(false);
   const [listName, setListName] = useState(INITIAL_LIST_NAME);
@@ -27,11 +32,6 @@ export default function About({ pages }) {
 
     setListName(list)
   }
-
-  const publications = curriculumVitae[0].publications.reverse()
-  const talks = curriculumVitae[0].talks
-  // const conferences = curriculumVitae[0].exhibitions
-  const clients = curriculumVitae[0].clients
 
   return (
     <Layout>
