@@ -92,7 +92,7 @@ export default function Footer({ }) {
             <div className="w-5">
               <Logo className="w-[18px] static" />
             </div>
-            <p className="pl-2 pr-2 text-[8px] md:text-xs">coding + design &copy; 2024</p>
+            <p className="pl-2 pr-2 text-[8px] md:text-xs">code + design &copy; 2024</p>
           </div>
 
           <div className="w-1/2 flex items-center place-content-end pr-5 md:pr-0">

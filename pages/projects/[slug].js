@@ -38,6 +38,7 @@ export default function PostPage({
 
   return (
     <Layout>
+      <SEO title={`${frontMatter.title} – Francesca Morini`} description={frontMatter.description} />
       <article className="md:px-0 mt-10 px-4 md:px-0">
         <header>
           <h1 className="text-3xl md:text-5xl dark:text-white mb-10">
@@ -48,9 +49,9 @@ export default function PostPage({
           )}
           {frontMatter.link && (<div className="mb-10 mt-10">
             <h6 className="uppercase text-sm border-b md:mr-10 text-sm">Link:</h6>
-            <Link href="/">
+            <Link href={frontMatter.link}>
               <div className="inline-flex relative cursor-pointer text-sm leading-none">
-                <a className="inline-block align-middle uppercase">Visit project</a>
+                <a className="inline-block align-middle uppercase">Go to project</a>
                 {/* <ArrowIcon className="h-[18px] inline-block align-middle" /> */}
               </div>
             </Link>

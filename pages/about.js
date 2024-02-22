@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { getPages } from '../utils/mdx-utils';
 import { useState, useRef, useEffect } from 'react';
 import curriculumVitae from '../public/data/personal.json'
+import SEO from '../components/SEO';
+
 const INITIAL_LIST_NAME = ''
 
 const publications = curriculumVitae[0].publications.reverse()
@@ -35,7 +37,7 @@ export default function About({ pages }) {
 
   return (
     <Layout>
-      {/* <SEO title={globalData.name} description={globalData.blogTitle} /> */}
+      <SEO title="About Francesca" description="My name is Francesca. I am a designer, researcher, and amateur baker. Currently, I work at Södertörn University, Huddinge, Stockholm." />
       <main className="w-full flex-grow text-pretty">
         <div className="pl-5 pr-5 pt-5 pb-5 md:mt-6">
           <div className="w-full flex flex-wrap">
@@ -46,7 +48,7 @@ export default function About({ pages }) {
             <div className="w-full h-fit md:w-1/2 md:pl-6 flex flex-wrap">
               <div className="w-full pt-6 md:pt-0">
                 <p className="md:text-2xl">
-                  My name is Francesca. I am a designer, researcher, and baker.
+                  My name is Francesca. I am a designer, researcher, and amateur baker.
                   Currently, I work at Södertörn University, Huddinge, Stockholm.
                   I am associated with the UCLAB, at the University of Applied Sciences Potsdam, Brandenburg.
                 </p>
