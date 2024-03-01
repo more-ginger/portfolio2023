@@ -1,0 +1,1 @@
+{"c":["pages/_app","pages/index","pages/projects/[slug]","pages/about","webpack"],"r":["pages/about"],"m":["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=%2FUsers%2Ffrancescamorini%2Fprojects%2Fdev2023%2Fportfolio2023%2Ffrancescamorini.com%2Fpages%2Fabout.js&page=%2Fabout!","./pages/about.js","./public/data/personal.json"]}
