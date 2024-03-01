@@ -1,0 +1,161 @@
+[
+  {  
+  "publications": [
+    {
+        "year": "2019",
+        "title": "Seeding context, cultivating perspectives. A situated method for urban cartography to explore temporal patterns in the contemporary city",
+        "link": "https://hdl.handle.net/10589/149351",
+        "publication": "POLITesi"  
+    },
+    {
+        "year": "2022",
+        "title": "Sensing what’s new: considering ethics when using sensor data in journalistic practices",
+        "link": "https://doi.org/10.1080/21670811.2022.2134161",
+        "publication": "Digital Journalism"
+    },
+    {
+        "year": "2023",
+        "title": "Data Stories of Water: Studying the Communicative Role of Data Visualizations within Long-form Journalism",
+        "link": "10.1111/cgf.14815",
+        "publication": "COMPUTER GRAPHICS forum"
+    },
+    {
+        "year": "2023",
+        "title": "Attitudinal effects of data visualizations and illustrations in data stories",
+        "link": "10.1109/TVCG.2023.3248319",
+        "publication": "IEEE Transactions on Visualization and Computer Graphics"
+    },
+    {
+        "year": "2023",
+        "title": "Data Journalism as “Terra Incognita”: Newcomers’ Tensions in Shifting Towards Data Journalism Epistemology",
+        "link": "https://doi.org/10.1080/17512786.2023.2185656",
+        "publication": "Journalism Practice"
+    },
+    {
+        "year": "2023",
+        "title": "From shock to shift: Data visualization for constructive climate journalism",
+        "link": "10.1109/TVCG.2023.3327185",
+        "publication": "IEEE Transactions on Visualization and Computer Graphics"
+    }
+  ],  
+  "talks": [
+      {
+        "year": "2019",
+        "place": "Zeit Online, Berlin",
+        "title": "Data Vis Berlin",
+        "description": "Visualizing the Climate Crisis with Jonas Parnow and Fidel Thomet",
+        "link": "https://www.meetup.com/de-DE/Data-Visualization-Berlin/events/265769362/",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2020",
+        "place": "IXDS, Berlin",
+        "title": "Maptime Berlin",
+        "description": "Emotional Maps: Seeding Context, Cultivating Perspectives",
+        "link": "https://www.meetup.com/de-DE/Maptime-BER/events/266513718/",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2020",
+        "place": "FHP, Potsdam",
+        "title": "Data Talks / Data Walks",
+        "description": "",
+        "link": "",
+        "icon": "📚"
+      },
+      {
+        "year": "2020",
+        "place": "FHP, Potsdam",
+        "title": "Scrollytelling for Beginners",
+        "description": "Online lectures for the Planetary Scrollytelling course",
+        "link": "https://github.com/more-ginger/scrollytelling-beginners",
+        "icon": "📚"
+      },
+      {
+        "year": "2021",
+        "place": "Computation + Journalism, Boston",
+        "title": "Digital go-alongs: recounting individual journeys through personal data in journalistic stories",
+        "description": "",
+        "link": "",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2022",
+        "place": "TU, Berlin",
+        "title": "Data sketching: how scribbling-scrabbling is really helpful in designing with data",
+        "description": "",
+        "link": "",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2022",
+        "place": "ECREA 2022, Aarhus",
+        "title": "Data journalism as 'terra incognita'",
+        "description": "",
+        "link": "",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2023",
+        "place": "Merz Akademie, Stuttgart",
+        "title": "Bachelor course in data visualization",
+        "description": "",
+        "link": "",
+        "icon": "📚"
+      },
+      {
+        "year": "2023",
+        "place": "NIAM23, Berlin",
+        "title": "FROM SHOCK TO SHIFT - Beteiligung von Zeitungsleser*innen in partizipativen, mehrkanaligen Datenvisualisierungen von Klimazukünften",
+        "description": "",
+        "link": "https://www.news-infographics-analytics-maps.media/2023.html",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2023",
+        "place": "Aalto University, Helsinki",
+        "title": "Data visualization and constructive data journalism @ Visualizing Knowledge",
+        "description": "",
+        "link": "",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2023",
+        "place": "VISAP23, Melbourne",
+        "title": "What is it that we teach: a reflection on teaching data visualization",
+        "description": "",
+        "link": "",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2023",
+        "place": "VIS23, Melbourne",
+        "title": "From shock to shift: data visualization for constructive climate journalism",
+        "description": "",
+        "link": "",
+        "icon": "🗣️"
+      }
+    ],
+  "exhibitions": [
+    {
+      "year": "2018",
+      "place": "New York",
+      "title": "Shortlist IIB 2018",
+      "description": "It's Carb Country is shortlisted",
+      "link": "https://www.informationisbeautifulawards.com/showcase/2644-it-s-carb-country",
+      "icon": "🍝"
+    },
+    {
+      "year": "2019",
+      "place": "Turin",
+      "title": "Torino Graphic Days",
+      "description": "Times of a Square @ Bianco Tangerine",
+      "link": "https://www.facebook.com/graphicdaystorino/photos/a.2408459302815433/2408468162814547/",
+      "icon": "🌸"
+    }
+  ],
+  "clients": [
+    "Google Italia", "Popular Science", "Substack", "taz, die tageszeitung", "Vice Italia", "Latte the Label", "VuK Brandenburg", "Nieuwe Instituut"
+  ]
+  }
+]

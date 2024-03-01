@@ -1,0 +1,68 @@
+@font-face {
+  font-family: PPObject-Regular;
+  src: url("/fonts/PPObjectSans-Regular.ttf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  font-family: PPObject-Regular;
+  text-wrap: pretty;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.non-active-link>a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: rgb(255, 0, 0);
+}
+
+body {
+  font-family: var(--font-secondary);
+}
+
+#noun-arrow-3771902 {
+  fill: black;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  #noun-arrow-3771902,
+  #Fill-1 {
+    fill: white;
+  }
+
+  #Desktop-HD-Copy {
+    stroke: white;
+  }
+
+  article>p>img {
+    border-color: rgb(3, 0, 27);
+  }
+
+  a:hover,
+  a:active {
+    color: rgb(252 165 165);
+  }
+}
