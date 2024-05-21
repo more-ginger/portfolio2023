@@ -49,7 +49,7 @@ export default function About({ pages }) {
               <div className="w-full pt-6 md:pt-0">
                 <p className="md:text-2xl">
                   My name is Francesca. I am a designer, researcher, and amateur baker.
-                  Currently, I work at Södertörn University, Huddinge, Stockholm.
+                  I research data visualization and data journalism. Currently, I work at Södertörn University, Huddinge, Stockholm.
                   I am associated with the UCLAB, at the University of Applied Sciences Potsdam, Brandenburg.
                 </p>
               </div>
