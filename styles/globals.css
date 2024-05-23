@@ -36,6 +36,7 @@ a {
 a:hover,
 a:active {
   color: rgb(255, 0, 0);
+  transition: color 0.5s;
 }
 
 body {
