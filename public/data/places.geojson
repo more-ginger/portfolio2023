@@ -1,0 +1,485 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lobe Block",
+        "description": "A gentrified gem in Gesundbrunnen. Yoga, view on the city, garden with chickens!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.380991,
+          52.548861
+        ]
+      },
+      "id": "cyNzQ"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Astra Stube",
+        "description": "I only go here because of Marta, I swear."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.433002,
+          52.484448
+        ]
+      },
+      "id": "YwOTE"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bierbrunnen",
+        "description": "They played Eros Ramazzotti on the speakers for me as soon as they picked up I was Italian. I died inside, but appreciate the kindness."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.386772,
+          52.549865
+        ]
+      },
+      "id": "E0OTY"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lobe Block",
+        "description": "A gentrified gem in Gesundbrunnen. Yoga, view on the city, garden with chickens!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.380991,
+          52.548861
+        ]
+      },
+      "id": "cyNzQ"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mariaberget",
+        "description": "Just a very nice corner <3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.062178,
+          59.320949
+        ]
+      },
+      "id": "gxMDM"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Silverfuture",
+        "description": "Let's go lesbians, let's goooo."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.430207,
+          52.488027
+        ]
+      },
+      "id": "UxMjE"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Undeway @ ZOB",
+        "description": "Crazy architecture. Technically not \"nice\", but interesting."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.280877,
+          52.506575
+        ]
+      },
+      "id": "Y4NDM"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wilma (former location)",
+        "description": "RIP Wilma."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.378714,
+          52.553417
+        ]
+      },
+      "id": "k1MjE"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Casina",
+        "description": "<3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.834118,
+          44.487992
+        ]
+      },
+      "id": "Y0MzI"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vibra",
+        "description": "A lot has happened in this place."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.917088,
+          44.655473
+        ]
+      },
+      "id": "E3NjM"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Capo Falcone",
+        "description": "A lot of childhood here."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.202646,
+          40.968552
+        ]
+      },
+      "id": "Q5MDU"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Antey-St-André",
+        "description": "Some more childhood here."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.586086,
+          45.806807
+        ]
+      },
+      "id": "YzMTA"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Matterhorn",
+        "description": "Slept here after getting stuck for the night in Zermatt."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.745229,
+          46.017096
+        ]
+      },
+      "id": "cxOTU"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "800 Grader slice shop",
+        "description": "The pizza with spicy salame."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.074256,
+          59.313636
+        ]
+      },
+      "id": "M5NzE"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dan Thai",
+        "description": "Literally anything that these ladies prepare is worth the trip."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.368902,
+          52.547522
+        ]
+      },
+      "id": "Q4NTY"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Julius",
+        "description": "I agree with Benja: the french toast is incredible."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.368216,
+          52.544991
+        ]
+      },
+      "id": "E3MzA"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Matschke Am Neuen Garten",
+        "description": "The white asparagus soup in May."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.06066,
+          52.409468
+        ]
+      },
+      "id": "AyMTE"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Meierei",
+        "description": "The beer tasting menu."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.06967,
+          52.422068
+        ]
+      },
+      "id": "I3MjY"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oeuf",
+        "description": "They make eggs, but the vegan option is often the best."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.369181,
+          52.545007
+        ]
+      },
+      "id": "A5ODA"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rosendals Trädgårdskafé",
+        "description": "Nice coffee, beautiful location."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.115366,
+          59.327369
+        ]
+      },
+      "id": "UxMDQ"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smack Burger",
+        "description": "Chili-cheese fries."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.384741,
+          52.550297
+        ]
+      },
+      "id": "Q0NDI"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Molto",
+        "description": "Nice wine."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.929119,
+          44.643395
+        ]
+      },
+      "id": "U3ODc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hops",
+        "description": "Nice beer. "
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.928969,
+          44.643495
+        ]
+      },
+      "id": "k0MTA"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Björnö",
+        "description": "Camping, BBQs, skinny dipping."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.573343,
+          59.231725
+        ]
+      },
+      "id": "U1Mjk"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sompasauna",
+        "description": "Public sauna, bring your beers and be ready to sweat."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.984798,
+          60.194095
+        ]
+      },
+      "id": "I2Njc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Roteflue",
+        "description": "Honestly I don't remember the name of the mountain, but we got on top and it started raining so hard we couldn't walk anymore. Beautiful spot."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.879128,
+          46.715576
+        ]
+      },
+      "id": "M0MTI"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "The amount of mosquitos. Also camping with a Smart.",
+        "name": "Freizeitcamp Am Wasser"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.376434,
+          54.612151
+        ]
+      },
+      "id": "I1Njc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salse di Nirano",
+        "description": "Always went here with my grandpa."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.823454,
+          44.513941
+        ]
+      },
+      "id": "Q3Mjg"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grindelwald",
+        "description": "I climbed somewhere around here."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.035555,
+          46.624421
+        ]
+      },
+      "id": "MxMjY"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Annot",
+        "description": "Climbed somewhere around here! :)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.664281,
+          44.032126
+        ]
+      },
+      "id": "I2MjA"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Larchant",
+        "description": "Bouldering here!"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.59361,
+          48.293692
+        ]
+      },
+      "id": "k0NTY"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Moliets et Maa",
+        "description": "One of the worst places ever."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.392517,
+          43.853397
+        ]
+      },
+      "id": "YzOTM"
+    }
+  ]
+}
