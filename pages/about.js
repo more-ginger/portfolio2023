@@ -68,7 +68,7 @@ export default function About({ pages }) {
                           publications.map((pub, p) => (
                             <tr className="" key={p}>
                               <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted pr-6 align-top text-xs">{pub.year}</td>
-                              <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top"><Link href={pub.link}>{pub.title}</Link></td>
+                              <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top"><Link href={pub.link} legacyBehavior>{pub.title}</Link></td>
                               <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top text-xs">{pub.publication}</td>
                             </tr>
                           ))}

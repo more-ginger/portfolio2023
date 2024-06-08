@@ -51,6 +51,24 @@ body {
   height: 100%;
 }
 
+.leaflet-popup-content-wrapper {
+  border: 1px solid red;
+  box-shadow: 0px 0px 1px rgba(74, 0, 0, 0.4) !important;
+}
+
+.leaflet-popup-content-wrapper .leaflet-popup-content {
+  font-size: 10px;
+  color: red;
+  text-align: center;
+  font-family: var(--font-secondary);
+  margin: 0.5em;
+}
+
+.leaflet-popup-tip,
+.leaflet-popup-close-button {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
 
   #noun-arrow-3771902,

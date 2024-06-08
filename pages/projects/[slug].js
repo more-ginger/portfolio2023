@@ -49,7 +49,7 @@ export default function PostPage({
           )}
           {frontMatter.link && (<div className="mb-10 mt-10">
             <h6 className="uppercase text-sm border-b md:mr-10 text-sm">Link:</h6>
-            <Link href={frontMatter.link}>
+            <Link href={frontMatter.link} legacyBehavior>
               <div className="inline-flex relative cursor-pointer text-sm leading-none">
                 <a className="inline-block align-middle uppercase">Go to project</a>
                 {/* <ArrowIcon className="h-[18px] inline-block align-middle" /> */}
@@ -79,7 +79,7 @@ export default function PostPage({
         </main>
         <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
           {prevPost && (
-            <Link href={`/projects/${prevPost.slug}`}>
+            <Link href={`/projects/${prevPost.slug}`} legacyBehavior>
               <div className="cursor-pointer float-left">
                 <a className="no-underline py-8 px-10 text-center md:text-right backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition flex flex-col">
                   <ArrowIcon className="w-[20px] transform rotate-180 mx-auto md:mr-0 mt-auto" />
@@ -94,7 +94,7 @@ export default function PostPage({
             </Link>
           )}
           {nextPost && (
-            <Link href={`/projects/${nextPost.slug}`}>
+            <Link href={`/projects/${nextPost.slug}`} legacyBehavior>
               <div className="cursor-pointer">
                 <a className="no-underline py-8 px-10 text-center md:text-left md:first:rounded-t-lg last:rounded-b-lg first:rounded-l-lg md:last:rounded-bl-none md:last:rounded-r-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition flex flex-col">
                   <ArrowIcon className="w-[20px] mt-auto mx-auto md:ml-0" />
