@@ -5,7 +5,7 @@ import tileLayer from '../node_modules/leaflet-providers'
 import "leaflet/dist/leaflet.css";
 
 
-export default function Map({ placesData }) {
+export default function Map({ placesData, currentMapCenter }) {
     const mapContainer = useRef();
 
     // flipping coords and bringing only necessary props
@@ -18,6 +18,9 @@ export default function Map({ placesData }) {
         }
     })
 
+    // filter the array for the first element in the data
+    const currentCenterFeature = dataWithSanitizedCoords.filter((place) => place.name === currentMapCenter)
+
     useEffect(() => {
         const markerIcon = L.icon({
             iconUrl: '/uploads/marker.svg',
@@ -26,7 +29,6 @@ export default function Map({ placesData }) {
             popupAnchor: [0, -5] // point from which the popup should open relative to the iconAnchor
         });
 
-        console.log('data', placesData)
         var container = L.DomUtil.get("world-map");
 
         if (container != null) {
@@ -38,7 +40,6 @@ export default function Map({ placesData }) {
             zoomControl: false
         });
 
-        console.log(dataWithSanitizedCoords[0])
         L.tileLayer.provider('Esri.WorldTopoMap').addTo(map);
 
         dataWithSanitizedCoords.forEach((d, i) => {
@@ -50,7 +51,9 @@ export default function Map({ placesData }) {
                 .bindPopup(popUp)
         })
 
-        map.setView(dataWithSanitizedCoords[0].markerCoords, 15);
+
+
+        map.setView(currentCenterFeature[0].markerCoords, 15);
     })
 
     return (

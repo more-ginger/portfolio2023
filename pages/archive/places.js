@@ -10,6 +10,13 @@ const DynamicMap = dynamic(() => import('../../components/Map'), {
 })
 
 export default function Places({ globalData }) {
+    let selectedPlace = placesData.features[0].properties.name
+
+    function changeMapCenter(newCenter) {
+        selectedPlace = newCenter.properties.name
+    }
+    // console.log(selectedPlace)
+
     return (
         <Layout>
             {/* <SEO title={globalData.name} description={globalData.blogTitle} /> */}
@@ -19,11 +26,11 @@ export default function Places({ globalData }) {
                     <div className="title bg-red-400 md:w-1/2">In the past years I was lucky enough to travel a lot. Be it for personal reasons or work-related, I compiled a small personal archive of places I love.</div>
                     <div className="container md:flex">
                         <div className="map-container bg-green-300 w-full">
-                            <DynamicMap placesData={placesData.features} />
+                            <DynamicMap placesData={placesData.features} currentMapCenter={selectedPlace} />
                         </div>
                         <div className="list-container w-full bg-blue-300">
                             {placesData.features.map((place, p) => (
-                                <p key={p}>{place.properties.name}</p>
+                                <p key={p} onClick={(e) => changeMapCenter(place)}>{place.properties.name}</p>
                             ))}
                         </div>
                     </div>
