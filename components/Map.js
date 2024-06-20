@@ -2,6 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import L from '../node_modules/leaflet';
 import tileLayer from '../node_modules/leaflet-providers'
+import { closestLayer } from '../node_modules/leaflet-geometryutil'
 import "leaflet/dist/leaflet.css";
 
 
@@ -9,6 +10,7 @@ export default function Map({ placesData, currentMapCenter }) {
     const mapContainer = useRef();
     // I need this to have the map as a global variable
     const globalMap = useRef();
+    const allMarkers = useRef([])
 
     useEffect(() => {
         const markerIcon = L.icon({
@@ -25,8 +27,10 @@ export default function Map({ placesData, currentMapCenter }) {
         }
 
         let map = L.map('world-map', {
-            worldCopyJump: false,
-            zoomControl: false
+            // worldCopyJump: true,
+            zoomControl: true,
+            minZoom: 12,
+            maxZoom: 20
         });
 
         // Update the ref current to add the map
@@ -34,14 +38,22 @@ export default function Map({ placesData, currentMapCenter }) {
 
         L.tileLayer.provider('Esri.WorldTopoMap').addTo(map);
 
+        // group for markers
+        let markers = L.layerGroup()
+
         placesData.forEach((d, i) => {
             let popUp = L.popup()
                 .setLatLng(d.geometry.coordinates)
-                .setContent(`${d.geometry.name}`)
+                .setContent(`${d.properties.name}`)
 
-            L.marker(d.geometry.coordinates, { icon: markerIcon }).addTo(map)
+            let marker = L.marker(d.geometry.coordinates, { icon: markerIcon }).addTo(map)
                 .bindPopup(popUp)
+
+            markers.addLayer(marker)
         })
+
+        // pass back to ref
+        allMarkers.current = markers.getLayers()
 
         map.setView(placesData[0].geometry.coordinates, 15);
     }, [])
@@ -51,10 +63,14 @@ export default function Map({ placesData, currentMapCenter }) {
         // checks if the map already exists
         if (globalMap.current !== undefined) {
             let map = globalMap.current
+
             // filter the array for the first element in the data
             let currentCenterFeature = placesData.filter((place) => place.properties.name === currentMapCenter)
+            // const selectedLayer = index.nearestLayer(currentCenterFeature[0].geometry.coordinates, 1, 500)
+            const closestMarker = closestLayer(map, allMarkers.current, currentCenterFeature[0].geometry.coordinates)
             // pan only works on locations close to each other
-            map.panTo(currentCenterFeature[0].geometry.coordinates);
+            map.flyTo(currentCenterFeature[0].geometry.coordinates, 12);
+            closestMarker.layer.togglePopup()
         }
 
     }, [currentMapCenter])

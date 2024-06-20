@@ -28,6 +28,8 @@
     "cypress": "^13.10.0",
     "gray-matter": "^4.0.2",
     "leaflet": "^1.9.4",
+    "leaflet-geometryutil": "^0.10.3",
+    "leaflet-knn": "^0.1.0",
     "leaflet-providers": "^2.0.0",
     "next": "latest",
     "next-mdx-remote": "^4.1.0",
