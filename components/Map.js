@@ -7,19 +7,8 @@ import "leaflet/dist/leaflet.css";
 
 export default function Map({ placesData, currentMapCenter }) {
     const mapContainer = useRef();
-
-    // flipping coords and bringing only necessary props
-    const dataWithSanitizedCoords = placesData.map((d, i) => {
-        const markerCoords = d.geometry.coordinates.reverse()
-        const name = d.properties.name
-        return {
-            markerCoords,
-            name
-        }
-    })
-
-    // filter the array for the first element in the data
-    const currentCenterFeature = dataWithSanitizedCoords.filter((place) => place.name === currentMapCenter)
+    // I need this to have the map as a global variable
+    const globalMap = useRef();
 
     useEffect(() => {
         const markerIcon = L.icon({
@@ -40,21 +29,35 @@ export default function Map({ placesData, currentMapCenter }) {
             zoomControl: false
         });
 
+        // Update the ref current to add the map
+        globalMap.current = map
+
         L.tileLayer.provider('Esri.WorldTopoMap').addTo(map);
 
-        dataWithSanitizedCoords.forEach((d, i) => {
+        placesData.forEach((d, i) => {
             let popUp = L.popup()
-                .setLatLng(d.markerCoords)
-                .setContent(`${d.name}`)
+                .setLatLng(d.geometry.coordinates)
+                .setContent(`${d.geometry.name}`)
 
-            L.marker(d.markerCoords, { icon: markerIcon }).addTo(map)
+            L.marker(d.geometry.coordinates, { icon: markerIcon }).addTo(map)
                 .bindPopup(popUp)
         })
 
+        map.setView(placesData[0].geometry.coordinates, 15);
+    }, [])
 
+    // only runs if "currentMapCenter" changes
+    useEffect(() => {
+        // checks if the map already exists
+        if (globalMap.current !== undefined) {
+            let map = globalMap.current
+            // filter the array for the first element in the data
+            let currentCenterFeature = placesData.filter((place) => place.properties.name === currentMapCenter)
+            // pan only works on locations close to each other
+            map.panTo(currentCenterFeature[0].geometry.coordinates);
+        }
 
-        map.setView(currentCenterFeature[0].markerCoords, 15);
-    })
+    }, [currentMapCenter])
 
     return (
         <div className="w-full h-[500px] bg-red-300">

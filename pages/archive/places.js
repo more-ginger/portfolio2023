@@ -1,5 +1,7 @@
 import Layout from '../../components/Layout';
 // import Map from '../../components/Map';
+import { useState, useEffect } from "react";
+
 import SEO from '../../components/SEO';
 import { getGlobalData } from '../../utils/global-data';
 import placesData from '../../public/data/places.json'
@@ -10,12 +12,18 @@ const DynamicMap = dynamic(() => import('../../components/Map'), {
 })
 
 export default function Places({ globalData }) {
-    let selectedPlace = placesData.features[0].properties.name
+    const [selectedPlace, setPlace] = useState(placesData.features[0].properties.name);
+
+    // the function only runs once, on first render
+    useEffect(() => {
+        placesData.features.forEach((d, i) => {
+            d.geometry.coordinates.reverse()
+        })
+    }, [])
 
     function changeMapCenter(newCenter) {
-        selectedPlace = newCenter.properties.name
+        setPlace(newCenter.properties.name)
     }
-    // console.log(selectedPlace)
 
     return (
         <Layout>
@@ -28,7 +36,7 @@ export default function Places({ globalData }) {
                         <div className="map-container bg-green-300 w-full">
                             <DynamicMap placesData={placesData.features} currentMapCenter={selectedPlace} />
                         </div>
-                        <div className="list-container w-full bg-blue-300">
+                        <div className="list-container w-full bg-blue-300 cursor-pointer">
                             {placesData.features.map((place, p) => (
                                 <p key={p} onClick={(e) => changeMapCenter(place)}>{place.properties.name}</p>
                             ))}
@@ -42,6 +50,5 @@ export default function Places({ globalData }) {
 
 export function getStaticProps() {
     const globalData = getGlobalData();
-
     return { props: { globalData } };
 }
