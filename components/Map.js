@@ -8,6 +8,7 @@ import "leaflet/dist/leaflet.css";
 
 export default function Map({ placesData, currentMapCenter }) {
     const mapContainer = useRef();
+
     // I need this to have the map as a global variable
     const globalMap = useRef();
     const allMarkers = useRef([])
@@ -36,7 +37,7 @@ export default function Map({ placesData, currentMapCenter }) {
         // Update the ref current to add the map
         globalMap.current = map
 
-        L.tileLayer.provider('Esri.WorldTopoMap').addTo(map);
+        L.tileLayer.provider('CartoDB.PositronNoLabels').addTo(map);
 
         // group for markers
         let markers = L.layerGroup()
@@ -76,7 +77,7 @@ export default function Map({ placesData, currentMapCenter }) {
     }, [currentMapCenter])
 
     return (
-        <div className="w-full h-[500px] bg-red-300">
+        <div className="w-full h-full bg-red-300">
             <div ref={mapContainer} id="world-map" className="h-[500px] bg-yellow-300"></div>
         </div>
     )

@@ -32,19 +32,19 @@ export default function Places({ globalData }) {
     return (
         <Layout>
             {/* <SEO title={globalData.name} description={globalData.blogTitle} /> */}
-            <main className="w-full h-full">
-                <div className="w-full h-full px-6 bg-red-200">
-                    <div className="title bg-red-300 md:w-1/2">Title</div>
-                    <div className="title bg-red-400 md:w-1/2">In the past years I was lucky enough to travel a lot. Be it for personal reasons or work-related, I compiled a small personal archive of places I love.</div>
-                    {areDataClean && <div className="container md:flex">
-                        <div className="map-container bg-green-300 w-full">
+            <main className="w-full h-3/4">
+                <div className="w-full h-full px-6">
+                    <div className="title md:w-1/2">Title</div>
+                    <div className="title md:w-1/2 pb-2">In the past years I was lucky enough to travel a lot. Be it for personal reasons or work-related, I compiled a small personal archive of places I love.</div>
+                    {areDataClean && <div className="container md:flex h-3/4 border-b-2 border-black">
+                        <div className="map-container w-full md:h-full h-2/3">
                             <DynamicMap placesData={placesData.features} currentMapCenter={selectedPlace} />
                         </div>
-                        <div className="list-container w-full bg-blue-300 cursor-pointer">
+                        <div className="list-container w-full pt-2 cursor-pointer overflow-scroll md:h-full h-1/3">
                             {placesData.features.map((place, p) => (
-                                <div key={p} onClick={(e) => changeMapCenter(place)} className="flex">
-                                    <p>{place.properties.name}</p>
-                                    <p>{place.geometry.coordinates}</p>
+                                <div key={p} onClick={(e) => changeMapCenter(place)} className="table p-1 w-full border-b border-black border-dotted">
+                                    <p className="text-xs">{place.properties.name}</p>
+                                    <span className="text-xs table-cell align-middle text-right pr-2">{place.geometry.coordinates[0]}, {place.geometry.coordinates[1]}</span>
                                 </div>
                             ))}
                         </div>
