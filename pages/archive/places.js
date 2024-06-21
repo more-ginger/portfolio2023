@@ -34,9 +34,9 @@ export default function Places({ globalData }) {
             {/* <SEO title={globalData.name} description={globalData.blogTitle} /> */}
             <main className="w-full h-3/4">
                 <div className="w-full h-full px-6">
-                    <div className="title md:w-1/2">Title</div>
+                    <div className="title md:w-1/2"><img className="w-1/3 ml-[-10px]" src="/uploads/label_archive-places-no-icon.png" /></div>
                     <div className="title md:w-1/2 pb-2">In the past years I was lucky enough to travel a lot. Be it for personal reasons or work-related, I compiled a small personal archive of places I love.</div>
-                    {areDataClean && <div className="container md:flex h-3/4 border-b-2 border-black">
+                    {areDataClean && <div className="container md:flex h-3/4 border-b-2 border-red-500">
                         <div className="map-container w-full md:h-full h-2/3">
                             <DynamicMap placesData={placesData.features} currentMapCenter={selectedPlace} />
                         </div>
