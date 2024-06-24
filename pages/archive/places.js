@@ -42,9 +42,14 @@ export default function Places({ globalData }) {
                         </div>
                         <div className="list-container w-full pt-2 cursor-pointer overflow-scroll md:h-full h-1/3">
                             {placesData.features.map((place, p) => (
-                                <div key={p} onClick={(e) => changeMapCenter(place)} className="table p-1 w-full border-b border-black border-dotted">
-                                    <p className="text-xs">{place.properties.name}</p>
-                                    <span className="text-xs table-cell align-middle text-right pr-2">{place.geometry.coordinates[0]}, {place.geometry.coordinates[1]}</span>
+                                <div key={p} onClick={(e) => changeMapCenter(place)} className="p-1 w-full border-b border-black border-dotted">
+                                    <div className="table w-full">
+                                        <p className="text-xs">{place.properties.name}</p>
+                                        <span className="text-xs table-cell align-middle text-right pr-1">{place.geometry.coordinates[0]}, {place.geometry.coordinates[1]}</span>
+                                    </div>
+                                    <div>
+                                        {selectedPlace === place.properties.name && <p className="text-xs pt-2">{place.properties.description}</p>}
+                                    </div>
                                 </div>
                             ))}
                         </div>
