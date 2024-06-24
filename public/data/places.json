@@ -49,21 +49,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lobe Block",
-        "description": "A gentrified gem in Gesundbrunnen. Yoga, view on the city, garden with chickens!"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.380991,
-          52.548861
-        ]
-      },
-      "id": "cyNzQ"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Mariaberget",
         "description": "Just a very nice corner <3"
       },
