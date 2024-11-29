@@ -13,27 +13,6 @@ const talks = curriculumVitae[0].talks.reverse()
 const clients = curriculumVitae[0].clients.reverse()
 
 export default function About({ pages }) {
-  const [showList, setShowList] = useState(false);
-  const [listName, setListName] = useState(INITIAL_LIST_NAME);
-  const prevListName = useRef(INITIAL_LIST_NAME)
-
-  useEffect(() => {
-    prevListName.current = listName;
-  }, [listName]);
-
-  function toggleList(list) {
-    setShowList(!showList)
-
-    if (showList === true && list !== '') {
-      setShowList(showList)
-    }
-
-    if (showList === true && list === prevListName.current) {
-      setShowList(false)
-    }
-
-    setListName(list)
-  }
 
   return (
     <Layout>
@@ -41,27 +20,28 @@ export default function About({ pages }) {
       <main className="w-full flex-grow text-pretty">
         <div className="pl-5 pr-5 pt-5 pb-5 md:mt-6">
           <div className="w-full flex flex-wrap">
-            <div className="md:w-1/2">
+            <div className="md:w-1/3">
               <img className="border border-slate-950 dark:border-white" src="/uploads/about-portait.jpg"></img>
-              <p className="text-sm">This is me with one of my chickens.</p>
+              <p className="text-xs mt-2">This is me with one of my chickens ❤️</p>
             </div>
-            <div className="w-full h-fit md:w-1/2 md:pl-6 flex flex-wrap">
-              <div className="w-full pt-6 md:pt-0">
-                <p className="md:text-2xl">
-                  My name is Francesca. I am a designer, researcher, and amateur baker.
-                  I research data visualization and data journalism. Currently, I work at Södertörn University, Huddinge, Stockholm.
-                  I am associated with the UCLAB, at the University of Applied Sciences Potsdam, Brandenburg.
+            <div className="w-full h-fit md:w-2/3 md:pl-6 flex flex-wrap">
+              <div className="w-full pt-6 px-4 md:pt-0">
+                <p className="">
+                  I am a designer, researcher, and amateur baker.<br/>
+                  I research data visualization and data journalism. I have a PhD in Media and Communication Studies from <a href="https://www.sh.se/english/sodertorn-university">Södertörn University</a>, Huddinge, Sweden.
+                  I work as a post-doc at the <a href="https://www.filmuniversitaet.de/">Film University Babelsberg KONRAD WOLF</a>, Potsdam, Germany.
+                  I am associated with the <a href="https://mlml.io/m/francesca-morini/">Metalab</a> Berlin and with the <a href="https://uclab.fh-potsdam.de/people/francesca-morini/">UCLAB</a> at the University of Applied Sciences Potsdam, Germany.
                 </p>
+                <div className="w-full m-auto pt-2 mt-2  text-center  border-t border-t-red-300 border-dotted">🥨</div>
               </div>
             </div>
           </div>
           <div>
-            <div className="w-full block mt-3">
-              <h3 className="pt-6 pb-2">Full CV:</h3>
+            <div className="w-full block mt-6">
               <div>
                 <div>
-                  <h3 className="w-full text-red-600 border-b border-b-red-600 dark:text-red-300 dark:border-b-red-300 cursor-pointer" onClick={() => toggleList('publications')}>Publications<span className="pl-1">{showList && listName === 'publications' ? "-" : "+"}</span></h3>
-                  <div className={`mt-0 ${showList && listName === 'publications' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
+                  <h3 className="w-full text-red-600 border-b border-b-red-600 dark:text-red-300 dark:border-b-red-300 cursor-pointer">Publications</h3>
+                  <div className={`mt-0`}>
                     <table className="text-sm my-4 border-separate border-spacing-3">
                       <tbody>
                         {
@@ -77,8 +57,8 @@ export default function About({ pages }) {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-red-600 dark:text-red-300 dark:border-b-red-300 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('teaching')}>Teaching and talks<span className="pl-1">{showList && listName == 'teaching' ? "-" : "+"}</span></h3>
-                  <div className={`mt-0 ${showList && listName === 'teaching' ? "opacity-1" : "hidden opacity-0 h-0"}`}>
+                  <h3 className="text-red-600 dark:text-red-300 dark:border-b-red-300 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('teaching')}>Teaching and talks</h3>
+                  <div className={`mt-0 `}>
                     <table className="text-sm my-4 border-separate border-spacing-3">
                       <tbody>
                         {talks.map((talk, t) => (
@@ -93,28 +73,9 @@ export default function About({ pages }) {
                     </table>
                   </div>
                 </div>
-                {/* <div>
-                <h3 className="text-red-600 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('conf')}>Conferences and exhibitions<span className="pl-1">+</span></h3>
-                <div className={`mt-0 ${showList && listName === 'conf' ? "visible" : "hidden opacity-0 h-0"}`}>
-                  <table className="text-sm w-full my-4">
-                    <tbody>
-                      {
-                        conferences.map((ex, e) => (
-                          <tr className="border-b border-b-red-600 border-dotted" key={e}>
-                            <td className="pr-6 align-top">{ex.year}</td>
-                            <td className="pr-6 align-top">{ex.icon}</td>
-                            <td className="pr-6 align-top">{ex.title}</td>
-                            <td className="align-top">{ex.place}</td>
-                          </tr>
-                        ))
-                      }
-                    </tbody>
-                  </table>
-                </div>
-              </div> */}
                 <div>
-                  <h3 className="text-red-600 border-b border-b-red-600 dark:text-red-300 dark:border-b-red-300 cursor-pointer" onClick={() => toggleList('clients')}>Selected clients<span className="pl-1">{showList && listName === 'clients' ? "-" : "+"}</span></h3>
-                  <div className={`transition-all ${showList && listName === 'clients' ? "h-fit opacity-1" : "h-0 opacity-0"}`}>
+                  <h3 className="text-red-600 border-b border-b-red-600 dark:text-red-300 dark:border-b-red-300 cursor-pointer">Selected clients</h3>
+                  <div className={`transition-all`}>
                     <div className="text-sm w-full my-4">
                       <p>
                         {clients.map((client, c) => (

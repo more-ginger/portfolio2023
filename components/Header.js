@@ -15,13 +15,13 @@ export default function Header({ name }) {
               Browse
             </Link>
           </div>
+          <div className="flex-none pl-5 pr-1">
+            <Link href="https://xyz.francescamorini.com/">
+              Archive
+            </Link>
+          </div>
           <div className="flex-none pl-1 pr-1 pl-2 italic pointer-events-none cursor-not-allowed non-active-link">
             <Link href="/read"><span className="opacity-20 text-sm">Read</span></Link><span className="ml-1 px-2 text-white align-top text-[9px] bg-red-700 rounded-full dark:bg-red-300 dark:text-gray-900">soon</span>
-          </div>
-          <div className="flex-none pr-2 pl-1 italic pointer-events-none cursor-not-allowed non-active-link">
-            <Link href="/archive">
-              <span className="opacity-20 text-sm">Archive</span>
-            </Link><span className="ml-1 px-2 text-white align-top text-[9px] bg-red-700 rounded-full dark:bg-red-300 dark:text-gray-900">soon</span>
           </div>
         </div>
         <div className="flex w-1/3 justify-end">

@@ -36,7 +36,25 @@
         "title": "From shock to shift: Data visualization for constructive climate journalism",
         "link": "10.1109/TVCG.2023.3327185",
         "publication": "IEEE Transactions on Visualization and Computer Graphics"
-    }
+    },
+    {
+      "year": "2024",
+      "title": "Value sensitive design ",
+      "link": "https://doi.org/10.7146/journalistica.v18i1.146560",
+      "publication": "Journalistica"
+  },
+  {
+    "year": "2024",
+    "title": "Different yet complementary: A systematic literature review on data journalism in visualization research and journalism studies",
+    "link": "https://journals.sagepub.com/doi/10.1177/14648849241237897",
+    "publication": "Journalism"
+  },
+  {
+    "year": "2024",
+    "title": "Design + Data Journalism: Shifting epistemologies, values, and practices",
+    "link": "https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1903991&dswid=2059",
+    "publication": "Södertörns högskola"
+  }
   ],  
   "talks": [
       {
@@ -134,6 +152,22 @@
         "description": "",
         "link": "",
         "icon": "🗣️"
+      },
+      {
+        "year": "2024",
+        "place": "Umweltbundesamt, Berlin",
+        "title": "The outsiders 👽 are inside: designers and design practices in newsrooms",
+        "description": "",
+        "link": "",
+        "icon": "🗣️"
+      },
+      {
+        "year": "2024",
+        "place": "FHP, Potsdam",
+        "title": "Deconstructing User Interfaces",
+        "description": "",
+        "link": "",
+        "icon": "📚"
       }
     ],
   "exhibitions": [
