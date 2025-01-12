@@ -27,8 +27,8 @@ export default function About({ pages }) {
             <div className="w-full h-fit md:w-2/3 md:pl-6 flex flex-wrap">
               <div className="w-full pt-6 px-4 md:pt-0">
                 <p className="">
-                  I am a designer, researcher, and amateur baker.<br/>
-                  I research data visualization and data journalism. I have a PhD in Media and Communication Studies from <a href="https://www.sh.se/english/sodertorn-university">Södertörn University</a>, Huddinge, Sweden.
+                  I am an information designer, researcher, and amateur baker.
+                  I research data visualization and data journalism. I have a PhD in Media and Communication Studies from <a href="https://www.sh.se/english/sodertorn-university">Södertörn University</a>, Huddinge, Sweden.<br/><br/>
                   I work as a post-doc at the <a href="https://www.filmuniversitaet.de/">Film University Babelsberg KONRAD WOLF</a>, Potsdam, Germany.
                   I am associated with the <a href="https://mlml.io/m/francesca-morini/">Metalab</a> Berlin and with the <a href="https://uclab.fh-potsdam.de/people/francesca-morini/">UCLAB</a> at the University of Applied Sciences Potsdam, Germany.
                 </p>
