@@ -61,4 +61,39 @@ paragraphs:
 
 
       In general, I find categories and keywords particularly meaningful. They straddle a very adequate level of abstraction: they describe the article content, while remaining generic enough to match to more than one story. Also, these categories efficiently express the belonging of a specific item to a broader collection within a news outlet. Visualising categories means offering a historical overview of how important certain topics within daily news coverage. Such approach can easily rely on the metaphor of “flow”, which is a somewhat intuitive way to discuss (and visualise) news. For instance, [TopTom](https://densitydesign.org/research/topic-tomographies-a-visual-approach-to-distil-information-from-media-streams/#Interface) (Gobbo et al., 2017) is a solid example of how to visualise a news data flow. The result is a visually straightforward and compelling stream of articles, distilled into their key concepts. Similarly, Figure 2 is a quick experiment I did visualising one year of New York Times along its most used categories. The visualisation shows the development of the top keywords (appearing in at least 100 articles) across the whole coverage.
+
+
+      image
+
+
+      The different shades of yellow are categories related to the Russia-Ukraine conflict, whereas the different shades of blue are categories specific to Israel and Palestine. It is noticeable how importance quickly changes for individual keywords, as the second conflict explodes, in October 2023. This shows precise editorial choices within the NYT: one conflict surpasses another in how often it is covered with the new supplanting the old. Such approach is promising, but poses an important limitation: individual articles (and their context) are lost. An interesting challenge would be to implement in a more sophisticated level of detail, showing how groups of categories overlap over time and the individual articles they represent.
+  - paragraph: >-
+      *Approach B: Staging visuals* – Header images are visual artefacts
+      positioned at the top of every news item. Similarly to keywords, they have
+      a double intended usage. Aside from being the main visual component of
+      articles, they are also included in the head section of a webpage to be
+      fetched as metadata and displayed as preview for the article on other
+      platforms (e.g. social media, messaging apps, etc.). As such, they have a
+      certain importance, when compared with other in-text images or multimedia
+      artefacts. As the main visual, they are the main point of contact between
+      the outlet and the reader. They are picked and/or designed to quickly
+      attract and retain one’s attention. 
+
+      For this reason, I started to play with the idea of building a „hyper-visual“ newspaper. If we were to remove everything but images, how would news look like? I immediately thought of collaging, specifically these ‚90s-style diary entries and posters with “celebrity crushes”. Basically, cut-outs of the same face (belonging to a beloved actor or actress) are sampled from magazines and collaged together. I started with a sub-selection of my data: photos of people. After implementing a rudimental facial recognition pipeline, I was able to extract and mask almost all human faces belonging to one month of news coverage by the German newspaper Zeit. In Figure 3, a dump of some 100 cut-outs gives an idea of how such collaging could work out.
+
+
+      image
+
+
+      This approach treats news articles almost as collection items. There are several examples of digitised museum collections, where the images become the main protagonist of the visualisation (i.e. ). In this particular case, the curatorial work of selecting only a certain type of image is done through computer vision. Among other projects, [recent work from the GRADIM Team at the UCLAB Potsdam](https://gradim.fh-potsdam.de/prototypes/contactsheets/contactSheets.html) has brought evidence about how facial recognition and computer-enhanced curation could be an interesting tool for the digital humanities. I believe this could be true also for visualising news coverage. In particular, it could be interesting to see how the comparison between different outlets could play out. Especially to answer questions connected to visual culture and its impact on the presentation of contemporary news.
+  - paragraph: >-
+      Approach C: Networks based on in-article links 
+
+      Digital news exists in a hyper textual environment, which allows for the cross-referencing of sources and articles. One article often contains hyperlinks pointing to other articles from the same outlet or external webpages. Visualising the incoming and outgoing connections from and to news articles poses an interesting approach to unveil the internal logics of publishing, where certain topics and items gain centrality compared to others. Such approach shows the different hierarchies and connections between topics, as related content always reference each other. Without even analysing the data, the first noticeable pattern is that news outlets tend to reference themselves. Links pointing to external pages (other news outlets, websites, etc.) are considerably much more rare than internal links pointed to the outlet own reporting. This evidence gave me the idea of designing a network of connections between articles within one news outlet. In particular, I find interesting the potential to show how one newspaper builds its own structure on a macroscopic level.
+
+
+      image
+
+
+      News items are not geo-referenced, but the network approach allows for a unique arrangement of individual entities in space. In Figure 4, articles are represented as nodes. If one article is linked to another, the nodes are visually connected to each other. The colour of single nodes express the main topic of the article. Only some items are consistently linked to each other. Some other constitute their own small constellation. The network unveils also the tendency for articles belonging to the same category to be close to each other, with only some nodes acting as “glue” between two or more different topics. What is missing from this experiment are the addition of external links, as well as a temporal perspective. These two dimensions are important. On the one hand, the integration of articles from other news outlets could show how different newsrooms influence each other. On the other hand, the addition of historical news data could show the “lifespan” of articles, revealing how certain topics evolve and what nodes remain the most relevant over time.
 ---
