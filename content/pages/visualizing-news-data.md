@@ -63,7 +63,7 @@ paragraphs:
       In general, I find categories and keywords particularly meaningful. They straddle a very adequate level of abstraction: they describe the article content, while remaining generic enough to match to more than one story. Also, these categories efficiently express the belonging of a specific item to a broader collection within a news outlet. Visualising categories means offering a historical overview of how important certain topics within daily news coverage. Such approach can easily rely on the metaphor of “flow”, which is a somewhat intuitive way to discuss (and visualise) news. For instance, [TopTom](https://densitydesign.org/research/topic-tomographies-a-visual-approach-to-distil-information-from-media-streams/#Interface) (Gobbo et al., 2017) is a solid example of how to visualise a news data flow. The result is a visually straightforward and compelling stream of articles, distilled into their key concepts. Similarly, Figure 2 is a quick experiment I did visualising one year of New York Times along its most used categories. The visualisation shows the development of the top keywords (appearing in at least 100 articles) across the whole coverage.
 
 
-      image
+      ![](/uploads/pn-2-nyt-coverage.png)
 
 
       The different shades of yellow are categories related to the Russia-Ukraine conflict, whereas the different shades of blue are categories specific to Israel and Palestine. It is noticeable how importance quickly changes for individual keywords, as the second conflict explodes, in October 2023. This shows precise editorial choices within the NYT: one conflict surpasses another in how often it is covered with the new supplanting the old. Such approach is promising, but poses an important limitation: individual articles (and their context) are lost. An interesting challenge would be to implement in a more sophisticated level of detail, showing how groups of categories overlap over time and the individual articles they represent.
@@ -96,4 +96,30 @@ paragraphs:
 
 
       News items are not geo-referenced, but the network approach allows for a unique arrangement of individual entities in space. In Figure 4, articles are represented as nodes. If one article is linked to another, the nodes are visually connected to each other. The colour of single nodes express the main topic of the article. Only some items are consistently linked to each other. Some other constitute their own small constellation. The network unveils also the tendency for articles belonging to the same category to be close to each other, with only some nodes acting as “glue” between two or more different topics. What is missing from this experiment are the addition of external links, as well as a temporal perspective. These two dimensions are important. On the one hand, the integration of articles from other news outlets could show how different newsrooms influence each other. On the other hand, the addition of historical news data could show the “lifespan” of articles, revealing how certain topics evolve and what nodes remain the most relevant over time.
+  - paragraph: "### Final remarks"
+  - paragraph: The creation and maintenance of programmatically-accessible online
+      archives should be a priority of news outlets. I think there are several
+      reasons why this is important. From a research point of view, the
+      possibility to access machine-readable data that describe news items could
+      foster new visual approaches to the dissemination of news outside of the
+      platform-centric logic of social media. The reason why I decided to bring
+      these example forward is to show what is possible to design with
+      consistently archived and indexed digital news data. Beyond visualization
+      and more generally research, the lack of archives of digital news
+      restricts the freedom of citizens in accessing information. If only a
+      small selection of outlets is able to consistently archive and disseminate
+      historical news, data, these voices and perspectives will become
+      increasingly central and possibly a benchmark for the interpretation of
+      our societies and cultures. An archive of digital news data should not
+      only include entries consisting of a title, url, or a snippet of text.
+      Each datapoint should include key information such as byline, publication
+      date and time, url to related multimedia contents, outgoing links, and SEO
+      keywords. In other word, each archival entry should bear traces of the
+      underlying publishing and commercial strategy of the newspaper,
+      foundational elements that drive the logics of contemporary news-making.
+      This way archival data about digital news could reflect the progressive
+      evolution of newspapers in the contemporary age. In the wild era of
+      predatory AI companies  – this task is not trivial. It is important to
+      design these archives as instruments for citizens and researchers, while
+      protecting them from being looted by data-hungry crawlers.
 ---
