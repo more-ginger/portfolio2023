@@ -4,7 +4,6 @@ ID:
   - visualizing-news-data
 date: January 31, 2025 4:47 PM
 paragraphs:
-  - paragraph: "![](/uploads/screenshot-2025-02-01-at-09.06.00.png)"
   - paragraph: "## Some personal thoughts on opportunities and challenges"
   - paragraph: Few months ago I started working on a research project with the idea
       of visualising historical and contemporary news discourses. The main idea
