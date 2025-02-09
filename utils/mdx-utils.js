@@ -7,16 +7,11 @@ import remarkGfm from 'remark-gfm';
 
 // POSTS_PATH is useful when you want to get the path to a specific file
 export const POSTS_PATH = path.join(process.cwd(), 'content/blogs');
-export const PAGES_PATH = path.join(process.cwd(), 'content/pages');
+export const ARTICLES_PATH = path.join(process.cwd(), 'content/pages');
 
 // postFilePaths is the list of all mdx files inside the POSTS_PATH directory
 export const postFilePaths = fs
   .readdirSync(POSTS_PATH)
-  // Only include md(x) files
-  .filter((path) => /\.md?$/.test(path));
-
-export const pageFilePaths = fs
-  .readdirSync(PAGES_PATH)
   // Only include md(x) files
   .filter((path) => /\.md?$/.test(path));
 
@@ -45,21 +40,6 @@ export const getPosts = () => {
   return posts;
 };
 
-export const getPages = () => {
-  let pages = pageFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(PAGES_PATH, filePath));
-    const { content, data } = matter(source);
-
-    return {
-      content,
-      data,
-      filePath,
-    };
-  });
-
-  return pages;
-};
-
 export const getPostBySlug = async (slug) => {
   const postFilePath = path.join(POSTS_PATH, `${slug}.md`);
   const source = fs.readFileSync(postFilePath);
@@ -77,25 +57,6 @@ export const getPostBySlug = async (slug) => {
 
   return { mdxSource, data, postFilePath };
 };
-
-export const getPageBySlug = async (slug) => {
-  const pageFilePath = path.join(PAGES_PATH, `${slug}.md`);
-  const source = fs.readFileSync(pageFilePath);
-
-  const { content, data } = matter(source);
-
-  const mdxSource = await serialize(content, {
-    // Optionally pass remark/rehype plugins
-    mdxOptions: {
-      remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypePrism],
-    },
-    scope: data,
-  });
-
-  return { mdxSource, data, pageFilePath };
-};
-
 
 export const getNextPostBySlug = (slug) => {
   const posts = getPosts();
@@ -131,4 +92,38 @@ export const getPreviousPostBySlug = (slug) => {
     title: post.data.title,
     slug: previousPostSlug,
   };
+};
+
+export const articleFilesPaths = fs
+  .readdirSync(ARTICLES_PATH)
+  // Only include md(x) files
+  .filter((path) => /\.md?$/.test(path));
+
+export const getArticles = () => {
+  let pages = articleFilesPaths.map((filePath) => {
+    const source = fs.readFileSync(path.join(ARTICLES_PATH, filePath));
+    const { content, data } = matter(source);
+
+    return {
+      content,
+      data,
+      filePath,
+    };
+  });
+
+  return pages;
+};
+
+export const getArticleBySlug = async (slug) => {
+  const pageFilePath = path.join(ARTICLES_PATH, `${slug}.md`); 
+  const source = fs.readFileSync(pageFilePath);
+
+  const { data } = matter(source);
+
+  const parsedParagraphs = await Promise.all(data.paragraphs.map(async (p) => {
+    const par = await serialize(p.paragraph, {scope:data})
+    return par
+  }))
+
+  return { parsedParagraphs, data, pageFilePath };
 };

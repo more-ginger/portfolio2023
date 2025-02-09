@@ -1,13 +1,11 @@
 import { getGlobalData } from '../../utils/global-data';
 import {
-  getPageBySlug,
-  pageFilePaths,
+  getArticleBySlug,
+  articleFilesPaths,
 } from '../../utils/mdx-utils';
 
 import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
-import Link from 'next/link';
-import ArrowIcon from '../../components/ArrowIcon';
 import CustomLink from '../../components/CustomLink';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
@@ -24,47 +22,37 @@ const components = {
   Head,
 };
 
-export default function ArchivePage({
-  frontMatter,
-}) {
-
+export default function ArchivePage({ source, frontMatter }) {
+  console.log(source)
   return (
     <Layout>
-      <article className="md:px-0 mt-10 px-4 md:px-0">
-        <main>
-          <div className="pl-5 pr-5 pt-5 pb-5">
-            <h1 className="text-3xl border-b">
-              {frontMatter.title}
-            </h1>
-          </div>
-          <div className="pl-5 pr-5 text-base">
-            {frontMatter.paragraphs.map((par, p) => (
-              <div key={par.paragraph}>
-                <p className="pb-10">{par.paragraph}</p>
-              </div>
+          <article className="[&>*]:my-10 mx-6">
+            <h1>{frontMatter.title}</h1>
+
+            {source.map((paragraph, p) => (
+              <MDXRemote {...paragraph} key={p} components={components} />        
             ))}
-          </div>
-        </main>
-      </article>
+          </article>
     </Layout>
   );
 }
 
 export const getStaticProps = async ({ params }) => {
+  // Remember: the console logs in the terminal, bc props are server-side 
   const globalData = getGlobalData();
-  const { mdxSource, data } = await getPageBySlug(params.slug);
+  const { parsedParagraphs, data } = await getArticleBySlug(params.slug);
 
   return {
     props: {
       globalData,
-      source: mdxSource,
+      source: parsedParagraphs,
       frontMatter: data
     },
   };
 };
 
 export const getStaticPaths = async () => {
-  const paths = pageFilePaths
+  const paths = articleFilesPaths
     // Remove file extensions for page paths
     .map((path) => path.replace(/\.mdx?$/, ''))
     // Map the path into the static paths object required by Next.js
@@ -72,6 +60,6 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
