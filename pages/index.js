@@ -8,7 +8,7 @@ import SEO from '../components/SEO';
 
 export default function Browse({ posts, globalData }) {
   return (
-    <Layout>
+    (<Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <main className="w-full relative">
         <ul className="w-full">
@@ -20,36 +20,36 @@ export default function Browse({ posts, globalData }) {
               <Link
                 as={`/projects/${post.filePath.replace(/\.md?$/, '')}`}
                 href={`/projects/[slug]`}
-              >
-                <a className="w-full relative flex-wrap md:flex-nowrap flex py-6 lg:py-10 px-3 block focus:outline-none focus:ring-4 hover:text-black dark:hover:text-white no-underline">
-                  {post.data.himage && (
-                    <img className="max-h-[320px] mx-auto md:mx-0 md:w-1/2 md:max-w-xs border border-slate-950 dark:border-white" src={`${post.data.himage}`}></img>
-                  )}
-                  <div className="px-6 pt-6 text-2xl md:w-3/5">
-                    <div className="flex flex-wrap">
-                      {post.data.categories && post.data.categories.map((category, c) => (
-                        <p className="mb-4 text-xs mr-1" key={c}>
-                          <span className="border rounded-full border-slate-950 dark:border-white px-3 py-1">{category}</span>
-                        </p>
-                      ))}
-                    </div>
-                    <h2 className="pb-3 text-2xl">{post.data.title}</h2>
-                    {post.data.description && (
-                      <div className="mb-4 text-sm h-30">
-                        <p className="h-full overflow-hidden">
-                          {post.data.description}
-                        </p>
-                      </div>
-                    )}
-                    <ArrowIcon className="w-[30px]" />
+                className="w-full relative flex-wrap md:flex-nowrap flex py-6 lg:py-10 px-3 block focus:outline-none focus:ring-4 hover:text-black dark:hover:text-white no-underline">
+
+                {post.data.himage && (
+                  <img className="max-h-[320px] mx-auto md:mx-0 md:w-1/2 md:max-w-xs border border-slate-950 dark:border-white" src={`${post.data.himage}`}></img>
+                )}
+                <div className="px-6 pt-6 text-2xl md:w-3/5">
+                  <div className="flex flex-wrap">
+                    {post.data.categories && post.data.categories.map((category, c) => (
+                      <p className="mb-4 text-xs mr-1" key={c}>
+                        <span className="border rounded-full border-slate-950 dark:border-white px-3 py-1">{category}</span>
+                      </p>
+                    ))}
                   </div>
-                </a>
+                  <h2 className="pb-3 text-2xl">{post.data.title}</h2>
+                  {post.data.description && (
+                    <div className="mb-4 text-sm h-30">
+                      <p className="h-full overflow-hidden">
+                        {post.data.description}
+                      </p>
+                    </div>
+                  )}
+                  <ArrowIcon className="w-[30px]" />
+                </div>
+
               </Link>
             </li>
           ))}
         </ul>
       </main>
-    </Layout>
+    </Layout>)
   );
 }
 
