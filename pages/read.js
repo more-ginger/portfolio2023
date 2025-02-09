@@ -18,7 +18,10 @@ export default function Index({ pages }) {
       <div>
         <div className="essays-container">
           {essayPreviews.map((preview) => (
-            <div key={preview.filepath}>{preview.title}</div>
+            <div key={preview.filepath}>
+              <div>{preview.title}</div>
+              <div></div>
+            </div>
           ))}
         </div>
       </div>
