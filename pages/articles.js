@@ -36,10 +36,10 @@ export default function Index({ pages }) {
                 href={`/articles/[slug]`}
               >
               <div className="flex w-full h-[300px] relative">
-              <div className="absolute left-[-150px]">
-                <img className='w-[300px] h-[300px] rounded-full ' src={`/uploads/${preview.id}.jpg`}></img>
+              <div className="absolute w-full left-[-150px] md:relative md:left-0">
+                <img className='w-[300px] h-[300px] rounded-full border border-black md:m-auto' src={`/uploads/${preview.id}.jpg`}></img>
               </div>
-              <div className="w-full ml-[160px] relative">
+              <div className="w-full ml-[160px] relative md:ml-2">
                 <div className="absolute top-[80px]">
                   <h5 className="text-xs rounded-full border border-black px-2 inline-block">{preview.date}</h5>
                   <h3 className="text-3xl my-2">{preview.title}</h3>
