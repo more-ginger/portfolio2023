@@ -82,7 +82,7 @@ const ThemeSwitcher = () => {
 
 export default function Footer({ }) {
   return (
-    <footer className="w-full sticky inset-x-0 bottom-0 bg-[#efedea] dark:bg-opacity-80 dark:bg-gray-900">
+    <footer className="w-full fixed inset-x-0 bottom-0 bg-[#efedea] dark:bg-opacity-80 dark:bg-gray-900">
       <div className="py-1 md:pt-5 md:pb-5 w-full flex">
         <div className="flex justify-evenly w-full">
           <div className="w-1/2 flex items-center">
