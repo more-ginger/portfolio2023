@@ -9,9 +9,13 @@ export const getGlobalData = () => {
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
     : 'All rights reserved.';
 
+  const months = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"]
+
   return {
     name,
     blogTitle,
     footerText,
+    months
   };
 };

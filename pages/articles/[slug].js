@@ -22,17 +22,27 @@ const components = {
   Head,
 };
 
-export default function ArchivePage({ source, frontMatter }) {
-  console.log(source)
+export default function ArchivePage({ source, frontMatter, globalData }) {
+  console.log(globalData)
+  const parsedDate = new Date(frontMatter.date);
+  const parsedPubDate = `${parsedDate.getDay()} ${globalData.months[parsedDate.getMonth()]} ${parsedDate.getFullYear()}`
   return (
     <Layout>
+        <div>
+          <figure className="w-full">
+            <img className='article-header m-auto my-6' src={`/uploads/${frontMatter.ID[0]}.jpg`}></img>
+            <div className="w-full text-center">
+                <h5 className="label">{parsedPubDate}</h5>
+            </div>
+          </figure>
           <article className="[&>*]:my-10 mx-6">
-            <h1>{frontMatter.title}</h1>
+              <h1>{frontMatter.title}</h1>
+              {source.map((paragraph, p) => (
+                <MDXRemote {...paragraph} key={p} components={components} />        
+              ))}
+            </article>
+        </div>
 
-            {source.map((paragraph, p) => (
-              <MDXRemote {...paragraph} key={p} components={components} />        
-            ))}
-          </article>
     </Layout>
   );
 }
