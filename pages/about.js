@@ -1,11 +1,8 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { getPages } from '../utils/mdx-utils';
-import { useState, useRef, useEffect } from 'react';
+import { getArticles } from '../utils/mdx-utils';;
 import curriculumVitae from '../public/data/personal.json'
 import SEO from '../components/SEO';
-
-const INITIAL_LIST_NAME = ''
 
 const publications = curriculumVitae[0].publications.reverse()
 const talks = curriculumVitae[0].talks.reverse()
@@ -95,7 +92,7 @@ export default function About({ pages }) {
 }
 
 export function getStaticProps() {
-  const pages = getPages();
+  const pages = getArticles();
 
   return { props: { pages } };
 }

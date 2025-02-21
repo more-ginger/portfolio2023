@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getPages } from '../utils/mdx-utils';
+import { getArticles } from '../utils/mdx-utils';
 
 import Layout from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
@@ -43,7 +43,7 @@ export default function Archive({ pages, globalData }) {
 }
 
 export function getStaticProps() {
-  const pages = getPages();
+  const pages = getArticles();
   const globalData = getGlobalData();
 
   return { props: { pages, globalData } };
