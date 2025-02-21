@@ -1,15 +1,14 @@
 import { getGlobalData } from '../../utils/global-data';
 import {
-  getPageBySlug,
-  pageFilePaths,
+  getArticleBySlug,
+  articleFilesPaths,
 } from '../../utils/mdx-utils';
 
 import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
-import Link from 'next/link';
-import ArrowIcon from '../../components/ArrowIcon';
 import CustomLink from '../../components/CustomLink';
 import Layout from '../../components/Layout';
+import ArrowIcon from '../../components/ArrowIcon';
 import SEO from '../../components/SEO';
 
 // Custom components/renderers to pass to MDX.
@@ -24,47 +23,62 @@ const components = {
   Head,
 };
 
-export default function ArchivePage({
-  frontMatter,
-}) {
-
+export default function ArchivePage({ source, frontMatter, globalData }) {
+  console.log(globalData)
+  const parsedDate = new Date(frontMatter.date);
+  const parsedPubDate = `${parsedDate.getDay()} ${globalData.months[parsedDate.getMonth()]} ${parsedDate.getFullYear()}`
   return (
     <Layout>
-      <article className="md:px-0 mt-10 px-4 md:px-0">
-        <main>
-          <div className="pl-5 pr-5 pt-5 pb-5">
-            <h1 className="text-3xl border-b">
-              {frontMatter.title}
-            </h1>
-          </div>
-          <div className="pl-5 pr-5 text-base">
-            {frontMatter.paragraphs.map((par, p) => (
-              <div key={par.paragraph}>
-                <p className="pb-10">{par.paragraph}</p>
+        <div className="relative">
+          <div className="sticky top-20 mx-4">
+            <div className="back border border-black inline-block pr-3 rounded-full cursor-pointer">
+              <div className="flex">
+                  <div className="scale-50 rotate-180"><ArrowIcon/></div>
+                    <div className="pt-[2px]">
+                      <a className="no-underline inline-block align-middle text-sm" href="/articles">Back</a>
+                    </div>
               </div>
-            ))}
+            </div>
           </div>
-        </main>
-      </article>
+          <figure className="w-full md:z-index-40 md:absolute md:top-0 md:left-[-340px] md:w-fit">
+            <div className="md:fixed">
+              <img className='article-header m-auto my-6  ' src={`/uploads/${frontMatter.ID[0]}.jpg`}></img>
+            </div>
+
+          </figure>
+          <div>
+               <div className="w-full text-center mx-4 mt-6 md:text-left">
+                  <h5 className="label">{parsedPubDate}</h5>
+                </div>
+              </div>
+          <article className="blog-article">
+              <h1>{frontMatter.title}</h1>
+              {source.map((paragraph, p) => (
+                <MDXRemote {...paragraph} key={p} components={components} />        
+              ))}
+            </article>
+        </div>
+
     </Layout>
   );
 }
 
 export const getStaticProps = async ({ params }) => {
+  // Remember: the console logs in the terminal, bc props are server-side 
   const globalData = getGlobalData();
-  const { mdxSource, data } = await getPageBySlug(params.slug);
+  const { parsedParagraphs, data } = await getArticleBySlug(params.slug);
 
   return {
     props: {
       globalData,
-      source: mdxSource,
+      source: parsedParagraphs,
       frontMatter: data
     },
   };
 };
 
 export const getStaticPaths = async () => {
-  const paths = pageFilePaths
+  const paths = articleFilesPaths
     // Remove file extensions for page paths
     .map((path) => path.replace(/\.mdx?$/, ''))
     // Map the path into the static paths object required by Next.js
@@ -72,6 +86,6 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };

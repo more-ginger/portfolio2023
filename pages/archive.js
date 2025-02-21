@@ -8,7 +8,7 @@ import SEO from '../components/SEO';
 
 export default function Archive({ pages, globalData }) {
   return (
-    <Layout>
+    (<Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <main className="w-full h-fit relative">
         <div className="w-full h-screen relative">
@@ -21,24 +21,24 @@ export default function Archive({ pages, globalData }) {
                 <Link
                   as={`/articles/${page.filePath.replace(/\.md?$/, '')}`}
                   href={`/articles/[slug]`}
-                >
-                  <a className="w-full relative flex-wrap md:flex-nowrap md:h-2/3 flex py-6 lg:py-10 px-3 block focus:outline-none focus:ring-4 hover:text-black no-underline">
-                    <div className="px-6 md:pr-3 pt-6 md:pt-0 text-2xl">
-                      <h2 className="pb-3 text-2xl">{page.data.title}</h2>
-                    </div>
-                    <div className="flex px-6 md:w-1/2">
-                      <p className="text-sm m-auto pr-3 md:pr-0">Date of publication <span className="pl-3 md:pl-6">&#x273A;</span></p>
-                      <p className="text-sm m-auto pr-3 md:pr-0">Read</p>
-                      <ArrowIcon className="w-[20px] md:m-auto" />
-                    </div>
-                  </a>
+                  className="w-full relative flex-wrap md:flex-nowrap md:h-2/3 flex py-6 lg:py-10 px-3 block focus:outline-none focus:ring-4 hover:text-black no-underline">
+
+                  <div className="px-6 md:pr-3 pt-6 md:pt-0 text-2xl">
+                    <h2 className="pb-3 text-2xl">{page.data.title}</h2>
+                  </div>
+                  <div className="flex px-6 md:w-1/2">
+                    <p className="text-sm m-auto pr-3 md:pr-0">Date of publication <span className="pl-3 md:pl-6">&#x273A;</span></p>
+                    <p className="text-sm m-auto pr-3 md:pr-0">Read</p>
+                    <ArrowIcon className="w-[20px] md:m-auto" />
+                  </div>
+
                 </Link>
               </li>
             ))}
           </ul>
         </div>
       </main>
-    </Layout>
+    </Layout>)
   );
 }
 
