@@ -1,4 +1,5 @@
 import { getGlobalData } from '../../utils/global-data';
+import { useRouter } from 'next/router'
 import Link from 'next/link';
 import {
   getArticleBySlug,
@@ -10,7 +11,6 @@ import Head from 'next/head';
 import CustomLink from '../../components/CustomLink';
 import Layout from '../../components/Layout';
 import ArrowIcon from '../../components/ArrowIcon';
-import SEO from '../../components/SEO';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -25,9 +25,20 @@ const components = {
 };
 
 export default function ArchivePage({ source, frontMatter, globalData }) {
-  console.log(globalData)
-  const parsedDate = new Date(frontMatter.date);
-  const parsedPubDate = `${parsedDate.getDay()} ${globalData.months[parsedDate.getMonth()]} ${parsedDate.getFullYear()}`
+  
+  const router = useRouter()
+  
+  const parsedDate = frontMatter?.date ? new Date(frontMatter.date) : null;
+
+  const parsedPubDate = parsedDate
+    ? `${parsedDate.getDate()} ${globalData.months[parsedDate.getMonth()]} ${parsedDate.getFullYear()}`
+    : 'Date not available';
+
+
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
+
   return (
     <Layout>
         <div className="relative">
@@ -69,11 +80,17 @@ export const getStaticProps = async ({ params }) => {
   const globalData = getGlobalData();
   const { parsedParagraphs, data } = await getArticleBySlug(params.slug);
 
+    if (!data || !parsedParagraphs) {
+      return {
+        notFound: true,
+      }
+    }
+
   return {
     props: {
       globalData,
       source: parsedParagraphs,
-      frontMatter: data
+      frontMatter: data 
     },
   };
 };
@@ -85,8 +102,9 @@ export const getStaticPaths = async () => {
     // Map the path into the static paths object required by Next.js
     .map((slug) => ({ params: { slug } }));
 
+
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
