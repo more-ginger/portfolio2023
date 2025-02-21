@@ -1,4 +1,5 @@
 import { getGlobalData } from '../../utils/global-data';
+import Link from 'next/link';
 import {
   getArticleBySlug,
   articleFilesPaths,
@@ -35,7 +36,7 @@ export default function ArchivePage({ source, frontMatter, globalData }) {
               <div className="flex">
                   <div className="scale-50 rotate-180"><ArrowIcon/></div>
                     <div className="pt-[2px]">
-                      <a className="no-underline inline-block align-middle text-sm" href="/articles">Back</a>
+                      <Link className="no-underline inline-block align-middle text-sm" href="/articles">Back</Link>
                     </div>
               </div>
             </div>
