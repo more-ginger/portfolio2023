@@ -8,6 +8,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
 import CustomLink from '../../components/CustomLink';
 import Layout from '../../components/Layout';
+import ArrowIcon from '../../components/ArrowIcon';
 import SEO from '../../components/SEO';
 
 // Custom components/renderers to pass to MDX.
@@ -28,14 +29,29 @@ export default function ArchivePage({ source, frontMatter, globalData }) {
   const parsedPubDate = `${parsedDate.getDay()} ${globalData.months[parsedDate.getMonth()]} ${parsedDate.getFullYear()}`
   return (
     <Layout>
-        <div>
-          <figure className="w-full">
-            <img className='article-header m-auto my-6' src={`/uploads/${frontMatter.ID[0]}.jpg`}></img>
-            <div className="w-full text-center">
-                <h5 className="label">{parsedPubDate}</h5>
+        <div className="relative">
+          <div className="sticky top-20 mx-4">
+            <div className="back border border-black inline-block pr-3 rounded-full cursor-pointer">
+              <div className="flex">
+                  <div className="scale-50 rotate-180"><ArrowIcon/></div>
+                    <div className="pt-[2px]">
+                      <a className="no-underline inline-block align-middle text-sm" href="/articles">Back</a>
+                    </div>
+              </div>
             </div>
+          </div>
+          <figure className="w-full md:z-index-40 md:absolute md:top-0 md:left-[-340px] md:w-fit">
+            <div className="md:fixed">
+              <img className='article-header m-auto my-6  ' src={`/uploads/${frontMatter.ID[0]}.jpg`}></img>
+            </div>
+
           </figure>
-          <article className="[&>*]:my-10 mx-6">
+          <div>
+               <div className="w-full text-center mx-4 mt-6 md:text-left">
+                  <h5 className="label">{parsedPubDate}</h5>
+                </div>
+              </div>
+          <article className="blog-article">
               <h1>{frontMatter.title}</h1>
               {source.map((paragraph, p) => (
                 <MDXRemote {...paragraph} key={p} components={components} />        
