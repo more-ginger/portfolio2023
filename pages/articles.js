@@ -45,7 +45,7 @@ export default function Index({ pages, globalData }) {
               <div className="w-full ml-[160px] relative md:ml-5">
                 <div className="absolute top-[80px]">
                   <h5 className="label">{preview.date}</h5>
-                  <h3 className="text-3xl my-2">{preview.title}</h3>
+                  <h3 className="text-3xl my-2">{preview.title} &#x273A;</h3>
                   {/* <h5 className="label">#3 – Research journal</h5> */}
                 </div>
               </div>
