@@ -142,4 +142,17 @@ img.article-header {
   a:active {
     color: rgb(252 165 165);
   }
+
+  .back {
+    background-color: #111827;
+    border: 1px solid white;
+  }
+
+  h5.label {
+    border: 1px solid white;
+  }
+
+  img.article-header {
+    border: 1px solid white;
+  }
 }

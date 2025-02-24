@@ -14,7 +14,7 @@ export default function About({ pages }) {
   return (
     (<Layout>
       <SEO title="About Francesca" description="My name is Francesca. I am a designer, researcher, and amateur baker. Currently, I work at Södertörn University, Huddinge, Stockholm." />
-      <main className="w-full flex-grow text-pretty">
+      <main className="w-full flex-grow text-pretty mb-10">
         <div className="pl-5 pr-5 pt-5 pb-5 md:mt-6">
           <div className="w-full flex flex-wrap">
             <div className="md:w-1/3">
@@ -27,7 +27,7 @@ export default function About({ pages }) {
                   I am an information designer, researcher, and amateur baker.
                   I research data visualization and data journalism. I have a PhD in Media and Communication Studies from <a href="https://www.sh.se/english/sodertorn-university">Södertörn University</a>, Huddinge, Sweden.<br/><br/>
                   I work as a post-doc at the <a href="https://www.filmuniversitaet.de/">Film University Babelsberg KONRAD WOLF</a>, Potsdam, Germany.
-                  I am associated with the <a href="https://mlml.io/m/francesca-morini/">Metalab</a> Harvard & Berlin and with the <a href="https://uclab.fh-potsdam.de/people/francesca-morini/">UCLAB</a> at the University of Applied Sciences Potsdam, Germany.
+                  I am associated with the <a href="https://mlml.io/m/francesca-morini/">Metalab Harvard & Berlin</a> and with the <a href="https://uclab.fh-potsdam.de/people/francesca-morini/">UCLAB</a> at the University of Applied Sciences Potsdam, Germany.
                 </p>
                 <div className="w-full m-auto pt-2 mt-2  text-center  border-t border-t-red-300 border-dotted">🥨</div>
               </div>

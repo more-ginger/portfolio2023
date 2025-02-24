@@ -33,7 +33,7 @@ export default function Index({ pages, globalData }) {
         </div>
         <div className="essays-container w-full py-10">
           {essayPreviews.map((preview) => (
-            <div key={preview.filepath} className="w-full overflow-x-hidden group">
+            <div key={preview.filepath} className="w-full cursor-pointer overflow-x-hidden group">
               <CustomLink 
                 as={`/articles/${preview.filepath.replace(/\.md?$/, '')}`}
                 href={`/articles/[slug]`}

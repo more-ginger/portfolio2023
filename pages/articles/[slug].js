@@ -54,7 +54,7 @@ export default function ArchivePage({ source, frontMatter, globalData }) {
           </div>
           <figure className="w-full md:z-index-40 md:absolute md:top-0 md:left-[-340px] md:w-fit">
             <div className="md:fixed">
-              <img className='article-header m-auto my-6  ' src={`/uploads/${frontMatter.ID[0]}.jpg`}></img>
+              <img className='article-header m-auto my-6' src={`/uploads/${frontMatter.ID[0]}.jpg`}></img>
             </div>
 
           </figure>

@@ -92,12 +92,14 @@ export default function Footer({ }) {
             <div className="w-5">
               <Logo className="w-[18px] static" />
             </div>
-            <p className="pl-2 pr-2 text-[8px] md:text-xs">code + design &copy; 2024</p>
+            <p className="pl-2 pr-2 text-[8px] md:text-xs">code + design &copy; 2023 – 2025</p>
           </div>
 
           <div className="w-1/2 flex items-center place-content-end pr-5 md:pr-0">
             <div className="">
-              <Link className="pl-5 pr-3 text-right" href="/about">About</Link>
+              <Link className="no-underline"  href="/about">
+              <div className="mr-8 px-2 rounded-full border border-black text-right">About</div>
+              </Link>
             </div>
           </div>
         </div>

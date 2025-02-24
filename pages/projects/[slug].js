@@ -77,7 +77,7 @@ export default function PostPage({
             <MDXRemote {...source} components={components} />
           </article>
         </main>
-        <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
+        <div className="grid mb-10 md:grid-cols-2 lg:-mx-24 mt-12">
           {prevPost && (
             <Link href={`/projects/${prevPost.slug}`} legacyBehavior>
               <div className="cursor-pointer float-left">
