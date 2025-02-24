@@ -21,7 +21,7 @@ export default function Browse({ posts, globalData }) {
                 as={`/projects/${post.filePath.replace(/\.md?$/, '')}`}
                 href={`/projects/[slug]`}
                 className="w-full relative flex-wrap md:flex-nowrap flex py-6 lg:py-10 px-3 block focus:outline-none focus:ring-4 hover:text-black dark:hover:text-white no-underline">
-                <div>
+                <div className='w-full flex m-auto'>
                   {post.data.himage && (
                     <img className="max-h-[320px] mx-auto md:mx-0 md:w-1/2 md:max-w-xs border border-slate-950 dark:border-white" src={`${post.data.himage}`}></img>
                   )}
