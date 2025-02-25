@@ -15,7 +15,7 @@ export default function Browse({ posts, globalData }) {
           {posts.map((post) => (
             <li
               key={post.filePath}
-              className="flex backdrop-blur-lg dark:bg-gray-900 dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border-t border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0"
+              className="flex backdrop-blur-lg dark:bg-gray-900 dark:bg-opacity-30 bg-opacity-10 cursor-pointer hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border-t border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0"
             >
               <Link
                 as={`/projects/${post.filePath.replace(/\.md?$/, '')}`}
