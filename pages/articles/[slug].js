@@ -11,6 +11,7 @@ import Head from 'next/head';
 import CustomLink from '../../components/CustomLink';
 import Layout from '../../components/Layout';
 import ArrowIcon from '../../components/ArrowIcon';
+import SEO from '../../components/SEO';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -39,8 +40,11 @@ export default function ArchivePage({ source, frontMatter, globalData }) {
     return <div>Loading...</div>
   }
 
+
+  console.log(frontMatter)
   return (
     <Layout>
+      <SEO title={frontMatter.title} description={frontMatter.paragraphs[1].paragraph} />
         <div className="relative">
           <div className="sticky top-20 mx-4">
             <div className="back border border-black inline-block pr-3 rounded-full cursor-pointer">
