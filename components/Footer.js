@@ -96,9 +96,9 @@ export default function Footer({ }) {
           </div>
 
           <div className="w-1/2 flex items-center place-content-end pr-5 md:pr-0">
-            <div className="">
+            <div className="cursor-pointer">
               <Link className="no-underline"  href="/about">
-              <div className="mr-8 px-2 rounded-full border border-black text-right">About</div>
+              <div className="mr-8 px-2 rounded-full border border-black text-right dark:border-white">About</div>
               </Link>
             </div>
           </div>

@@ -60,7 +60,7 @@ export default function ArchivePage({ source, frontMatter, globalData }) {
           </figure>
           <div>
                <div className="w-full text-center mx-4 mt-6 md:text-left">
-                  <h5 className="label">{parsedPubDate}</h5>
+                  <h5>{parsedPubDate}</h5>
                 </div>
               </div>
           <article className="blog-article">

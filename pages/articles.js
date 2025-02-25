@@ -24,7 +24,7 @@ export default function Index({ pages, globalData }) {
           <div className="mx-6 border-l border-black md:w-1/3">
             <img src={`/uploads/journal.png`}/>
           </div>
-          <div className="mx-6 mt-10 md:w-2/3 md:ml-4">
+          <div className="mx-6 md:w-2/3 md:ml-4">
             <h1>Journal</h1>
             <h3>
               On this page, I share personal thoughts about my work and updates about my research.
@@ -43,10 +43,9 @@ export default function Index({ pages, globalData }) {
                 <img className='article-header' src={`/uploads/${preview.id}.jpg`}></img>
               </div>
               <div className="w-full ml-[160px] relative md:ml-5">
-                <div className="absolute top-[80px]">
-                  <h5 className="label">{preview.date}</h5>
+                <div className="absolute top-[100px]">
+                  <h5 className="text-xs">{preview.date}</h5>
                   <h3 className="text-3xl my-2">{preview.title} &#x273A;</h3>
-                  {/* <h5 className="label">#3 – Research journal</h5> */}
                 </div>
               </div>
               </div>

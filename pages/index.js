@@ -10,7 +10,7 @@ export default function Browse({ posts, globalData }) {
   return (
     (<Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <main className="w-full relative">
+      <main className="w-full relative cursor-auto">
         <ul className="w-full">
           {posts.map((post) => (
             <li
@@ -26,10 +26,10 @@ export default function Browse({ posts, globalData }) {
                     <img className="max-h-[320px] mx-auto md:mx-0 md:w-1/2 md:max-w-xs border border-slate-950 dark:border-white" src={`${post.data.himage}`}></img>
                   )}
                   <div className="px-6 pt-6 text-2xl md:w-3/5">
-                    <div className="flex flex-wrap">
+                    <div className="flex flex-wrap mb-4">
                       {post.data.categories && post.data.categories.map((category, c) => (
-                        <p className="mb-4 text-xs mr-1" key={c}>
-                          <span className="border rounded-full border-slate-950 dark:border-white px-3 py-1">{category}</span>
+                        <p className="text-xs" key={c}>
+                          <span className="py-1 pl-1">{category}{c === post.data.categories.length - 1 ? ""  : ","}</span>
                         </p>
                       ))}
                     </div>

@@ -23,7 +23,7 @@ export default function About({ pages }) {
             </div>
             <div className="w-full h-fit md:w-2/3 md:pl-6 flex flex-wrap">
               <div className="w-full pt-6 px-4 md:pt-0">
-                <p className="">
+                <p>
                   I am an information designer, researcher, and amateur baker.
                   I research data visualization and data journalism. I have a PhD in Media and Communication Studies from <a href="https://www.sh.se/english/sodertorn-university">Södertörn University</a>, Huddinge, Sweden.<br/><br/>
                   I work as a post-doc at the <a href="https://www.filmuniversitaet.de/">Film University Babelsberg KONRAD WOLF</a>, Potsdam, Germany.
@@ -37,7 +37,7 @@ export default function About({ pages }) {
             <div className="w-full block mt-6">
               <div>
                 <div>
-                  <h3 className="w-full text-red-600 border-b border-b-red-600 dark:text-red-300 dark:border-b-red-300 cursor-pointer">Publications</h3>
+                  <h3 className="w-full text-red-600 border-b border-b-red-600 dark:text-red-300 dark:border-b-red-300 ">Academic publications</h3>
                   <div className={`mt-0`}>
                     <table className="text-sm my-4 border-separate border-spacing-3">
                       <tbody>
@@ -54,14 +54,14 @@ export default function About({ pages }) {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-red-600 dark:text-red-300 dark:border-b-red-300 border-b border-b-red-600 cursor-pointer" onClick={() => toggleList('teaching')}>Teaching and talks</h3>
+                  <h3 className="text-red-600 dark:text-red-300 dark:border-b-red-300 border-b border-b-red-600 " onClick={() => toggleList('teaching')}>Teaching and public talks</h3>
                   <div className={`mt-0 `}>
                     <table className="text-sm my-4 border-separate border-spacing-3">
                       <tbody>
                         {talks.map((talk, t) => (
                           <tr className="border-b border-b-red-600 dark:border-b-red-300 border-dotted" key={t}>
                             <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted pr-6 align-top text-xs">{talk.year}</td>
-                            <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top">{talk.icon}</td>
+                            <td className="align-top">{talk.icon}</td>
                             <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top">{talk.title}</td>
                             <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top text-xs">{talk.place}</td>
                           </tr>
@@ -71,7 +71,7 @@ export default function About({ pages }) {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-red-600 border-b border-b-red-600 dark:text-red-300 dark:border-b-red-300 cursor-pointer">Selected clients</h3>
+                  <h3 className="text-red-600 border-b border-b-red-600 dark:text-red-300 dark:border-b-red-300 ">Selected clients</h3>
                   <div className={`transition-all`}>
                     <div className="text-sm w-full my-4">
                       <p>
