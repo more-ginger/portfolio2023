@@ -27,4 +27,6 @@ The search dashboard is embedded within this broader investigation and helps rea
 
 From mobile, the layout is collapsed on a vertical column. Overall, the look and feel of the dashboard is quite simple. The individual projects are shown as tickets, hinting to the idea of a physical "Gutschrift" to offset emissions. A simple stacked bar is shown at the top, to show how many companies and projects are involved in the investigation.
 
+![](/uploads/oekogas-figure-2.png)
+
 The app has been embedded as an iFrame, deployed on a separate url to maximise flexibility in customising the looks and interactivity of the dashboard. The app has been developed together with [Luc Guillemot](https://lucguillemot.com/), a designer and developer based in Berlin.
