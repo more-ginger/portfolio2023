@@ -46,8 +46,8 @@ export default function ArchivePage({ source, frontMatter, globalData }) {
     <Layout>
       <SEO title={frontMatter.title} description={frontMatter.paragraphs[1].paragraph} />
         <div className="relative">
-          <div className="sticky top-20 mx-4">
-            <div className="back border border-black inline-block pr-3 rounded-full cursor-pointer">
+          <div className="sticky inline-block top-[100px] pr-3 left-6 back rounded-full border border-black lg:left-10">
+            <div className="inline cursor-pointer">
               <div className="flex">
                   <div className="scale-50 rotate-180"><ArrowIcon/></div>
                     <div className="pt-[2px]">
@@ -56,14 +56,14 @@ export default function ArchivePage({ source, frontMatter, globalData }) {
               </div>
             </div>
           </div>
-          <figure className="w-full md:z-index-40 md:absolute md:top-0 md:left-[-340px] md:w-fit">
-            <div className="md:fixed">
+          <figure className="w-full lg:z-index-40 lg:absolute lg:top-0 lg:left-[-340px] lg:w-fit">
+            <div className="lg:fixed">
               <img className='article-header m-auto my-6' src={`/uploads/${frontMatter.ID[0]}.jpg`}></img>
             </div>
 
           </figure>
           <div>
-               <div className="w-full text-center mx-4 mt-6 md:text-left">
+               <div className="w-full text-center px-4 mt-6 md:text-left">
                   <h5>{parsedPubDate}</h5>
                 </div>
               </div>
