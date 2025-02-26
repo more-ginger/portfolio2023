@@ -12,7 +12,7 @@ categories:
   - Data journalism
   - web development
   - UI design
-date: February 26, 2025 10:37 AM
+date: April 16, 2024 10:37 AM
 description: The project consists in a lightweight search dashboard that can be
   used to browse German gas supplier and the supposedly carbon-offsetting
   projects they finance. The dashboard is embedded in a broader investigative
