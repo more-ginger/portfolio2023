@@ -19,7 +19,7 @@ export default function Index({ pages, globalData }) {
 
   return (
     <Layout>
-      <div className="w-full">
+      <div className="w-full mb-10">
         <div className="p-6 mt-6 md:flex">
           <div className="mx-6 border-l border-black md:w-1/3 dark:border-white">
             <img src={`/uploads/journal.png`}/>
