@@ -125,6 +125,13 @@ img.article-header {
 
 @media (prefers-color-scheme: dark) {
 
+  body *, .header, .footer {
+    background-color: #111827;
+    color: white;
+  }
+
+
+  
   #noun-arrow-3771902,
   #Fill-1 {
     fill: white;
@@ -140,10 +147,10 @@ img.article-header {
 
   a:hover,
   a:active {
-    color: rgb(252 165 165);
+    color: rgb(255, 168, 168);
   }
 
-  .back {
+  .back, .about {
     background-color: #111827;
     border: 1px solid white;
   }

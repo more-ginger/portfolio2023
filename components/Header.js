@@ -7,7 +7,7 @@ export default function Header({ name }) {
 
 
   return (
-    (<header className="w-full z-10 sticky inset-x-0 top-0 bg-[#efedea] dark:bg-opacity-80 dark:bg-gray-900">
+    (<header className="header w-full z-10 sticky inset-x-0 top-0 bg-[#efedea] dark:bg-opacity-80 dark:bg-gray-900">
       <div className="pt-5 pb-5 w-full flex">
         <div className="flex w-2/3">
           <div className="flex-none pl-5 pr-1">

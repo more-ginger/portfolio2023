@@ -82,15 +82,15 @@ const ThemeSwitcher = () => {
 
 export default function Footer({ }) {
   return (
-    <footer className="w-full fixed inset-x-0 bottom-0 bg-[#efedea] dark:bg-opacity-80 dark:bg-gray-900">
+    <footer className="footer w-full fixed inset-x-0 bottom-0 bg-[#efedea] py-4 md:py-0 dark:bg-gray-900">
       <div className="py-1 md:pt-5 md:pb-5 w-full flex">
         <div className="flex justify-evenly w-full">
-          <div className="w-1/2 flex items-center">
+          <div className="w-full md:w-1/2 flex items-center">
             <p className="pl-5 pr-2 text-sm">
               FM
             </p>
             <div className="w-5">
-              <Logo className="w-[18px] static" />
+              <Logo className="w-[18px] static"/>
             </div>
             <p className="pl-2 pr-2 text-[8px] md:text-xs">code + design &copy; 2023 – 2025</p>
           </div>
@@ -98,7 +98,7 @@ export default function Footer({ }) {
           <div className="w-1/2 flex items-center place-content-end pr-5 md:pr-0">
             <div className="cursor-pointer">
               <Link className="no-underline"  href="/about">
-              <div className="mr-8 px-2 rounded-full border border-black text-right dark:border-white">About</div>
+              <div className="about md:mr-8 px-2 rounded-full border border-black text-right dark:border-white">About</div>
               </Link>
             </div>
           </div>
