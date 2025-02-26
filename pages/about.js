@@ -53,17 +53,15 @@ export default function About({ pages }) {
                     </table>
                   </div>
                 </div>
-                <div>
+                <div className="w-full">
                   <h3 className="text-red-600 dark:text-red-300 dark:border-b-red-300 border-b border-b-red-600 " onClick={() => toggleList('teaching')}>Teaching and public talks</h3>
-                  <div className={`mt-0 `}>
+                  <div className="mt-0">
                     <table className="text-sm my-4 border-separate border-spacing-3">
                       <tbody>
                         {talks.map((talk, t) => (
                           <tr className="border-b border-b-red-600 dark:border-b-red-300 border-dotted" key={t}>
-                            <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted pr-6 align-top text-xs">{talk.year}</td>
-                            <td className="align-top">{talk.icon}</td>
-                            <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top">{talk.title}</td>
-                            <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top text-xs">{talk.place}</td>
+                            <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted pr-6 align-top text-xs">{talk.year}, {talk.place}</td>
+                            <td className="border-t border-t-red-600 dark:border-t-red-300 border-dotted align-top">{talk.icon} {talk.title}</td>
                           </tr>
                         ))}
                       </tbody>
