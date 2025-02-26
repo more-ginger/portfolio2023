@@ -25,6 +25,8 @@ Gas suppliers across Germany are advertising “climate-neutral natural gas” -
 
 The search dashboard is embedded within this broader investigation and helps readers in finding their own gas supplier. The user can look up their gas company through the search function. Alternatively, a list of Bundesländer is included below. By expanding the individual accordions, the user sees the gas companies active in a specific state. By clicking on a company, the right view is upadated, showing a broad overview of the projects and carbon-offsetting credits. Individual projects are listed below and can be expanded to reveal more precise information about their context.
 
+![](/uploads/oekogas-ui-1-.gif)
+
 From mobile, the layout is collapsed on a vertical column. Overall, the look and feel of the dashboard is quite simple. The individual projects are shown as tickets, hinting to the idea of a physical "Gutschrift" to offset emissions. A simple stacked bar is shown at the top, to show how many companies and projects are involved in the investigation.
 
 ![](/uploads/oekogas-figure-2.png)
