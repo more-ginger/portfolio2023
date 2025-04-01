@@ -40,8 +40,6 @@ export default function ArchivePage({ source, frontMatter, globalData }) {
     return <div>Loading...</div>
   }
 
-
-  console.log(frontMatter)
   return (
     <Layout>
       <SEO title={frontMatter.title} description={frontMatter.paragraphs[1].paragraph} />

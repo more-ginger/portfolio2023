@@ -31,17 +31,13 @@ h2 {
   font-size: 36px;
 }
 
-a {
-  text-decoration: underline;
-}
-
 .non-active-link>a {
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-  color: rgb(255, 0, 0);
+  color: rgb(220 38 38);
 }
 
 body {
