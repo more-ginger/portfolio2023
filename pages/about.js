@@ -25,9 +25,9 @@ export default function About({ pages }) {
               <div className="w-full pt-6 px-4 md:pt-0">
                 <p>
                   I am an information designer, researcher, and amateur baker.
-                  I research data visualization and data journalism. I have a PhD in Media and Communication Studies from <a href="https://www.sh.se/english/sodertorn-university">Södertörn University</a>, Huddinge, Sweden.<br/><br/>
-                  I work as a post-doc at the <a href="https://www.filmuniversitaet.de/">Film University Babelsberg KONRAD WOLF</a>, Potsdam, Germany.
-                  I am associated with the <a href="https://mlml.io/m/francesca-morini/">Metalab Harvard & Berlin</a> and with the <a href="https://uclab.fh-potsdam.de/people/francesca-morini/">UCLAB</a> at the University of Applied Sciences Potsdam, Germany.
+                  I research data visualization and data journalism. I have a PhD in Media and Communication Studies from <a className="no-underline text-red-600" href="https://www.sh.se/english/sodertorn-university">Södertörn University</a>, Huddinge, Sweden.<br/><br/>
+                  I work as a post-doc at the <a className="no-underline text-red-600" href="https://www.filmuniversitaet.de/">Film University Babelsberg KONRAD WOLF</a>, Potsdam, Germany.
+                  I am associated with the <a className="no-underline text-red-600" href="https://mlml.io/m/francesca-morini/">Metalab Harvard & Berlin</a> and with the <a className="no-underline text-red-600" href="https://uclab.fh-potsdam.de/people/francesca-morini/">UCLAB</a> at the University of Applied Sciences Potsdam, Germany.
                 </p>
                 <div className="w-full m-auto pt-2 mt-2  text-center  border-t border-t-red-300 border-dotted">🥨</div>
               </div>
